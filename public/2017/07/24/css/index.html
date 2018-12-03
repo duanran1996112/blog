@@ -1,0 +1,853 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="review,css," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="css + css3 基础内容">
+<meta name="keywords" content="review,css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css">
+<meta property="og:url" content="http://yoursite.com/2017/07/24/css/index.html">
+<meta property="og:site_name" content="Web 前端">
+<meta property="og:description" content="css + css3 基础内容">
+<meta property="og:updated_time" content="2017-08-01T10:21:24.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css">
+<meta name="twitter:description" content="css + css3 基础内容">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/24/css/"/>
+
+
+
+
+
+  <title>css | Web 前端</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Web 前端</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个专业的 Web 前端博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/24/css/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="段然">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/./images/mySculpture.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Web 前端">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">css</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-24T12:17:00+08:00">
+                2017-07-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/review/" itemprop="url" rel="index">
+                    <span itemprop="name">review</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/review/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  css + css3 基础内容
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="css-amp-css3"><a href="#css-amp-css3" class="headerlink" title="css &amp; css3"></a>css &amp; css3</h2><h3 id="css-选择器"><a href="#css-选择器" class="headerlink" title="css 选择器"></a>css 选择器</h3><p>css选择器：（权重值）<br>!important：（无穷大）<br>行间样式：（1000）<br>id：（100）<br>class、属性、伪类：（10）<br>标签、伪元素：（1）<br>通配符：（0）</p>
+<h3 id="display-属性"><a href="#display-属性" class="headerlink" title="display 属性"></a>display 属性</h3><p>display 属性：<br>none：此元素不会被显示<br>block：此元素将显示为块级元素，此元素前后会带有换行符<br>inline：此元素会被显示为内联元素，元素前后没有换行符<br>inline-block：行内块元素<br>flex：css3 弹性盒子</p>
+<h3 id="position-属性-amp-z-index-属性-amp-三栏布局"><a href="#position-属性-amp-z-index-属性-amp-三栏布局" class="headerlink" title="position 属性 &amp; z-index 属性 &amp; 三栏布局"></a>position 属性 &amp; z-index 属性 &amp; 三栏布局</h3><p>postion 属性: absolute，relative，fixed（相对于视口定位），static，inherit</p>
+<p>position 与 z-index 的关系：同一级元素，若都有 position，谁在后谁在上面。若含有 z-index，谁 z-index 大，谁在上面。可以不用考虑 position，若 z-index 相同再考虑 position。</p>
+<p>问题：若同一级元素，都是绝对定位，其中一个 z-index 为 10，另一个 z-index 为 20，但是 z-index 为 10 的元素中含有一个 z-index 为 30 的 子元素，谁在最上面？<br>答案：z-index 为 20 的元素在最上面。其次是 z-index 为 30 元素。最后是 z-index 为 10 的元素。（先考虑 父级 z-index，再考虑 子级 z-index。） </p>
+<p>问题：如何三栏布局？<br>答案：<br>1.使用 position<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">// html</div><div class="line"></div><div class="line">&lt;div class=<span class="string">"left"</span>&gt;&lt;/div&gt;</div><div class="line">&lt;div class=<span class="string">"right"</span>&gt;&lt;/div&gt;</div><div class="line">&lt;div class=<span class="string">"center"</span>&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">// css</div><div class="line">.left &#123;</div><div class="line">    position: absolute;</div><div class="line">    top: 0;</div><div class="line">    left: 0;</div><div class="line">    height: 1000px;</div><div class="line">    width: 100px;</div><div class="line">    background-color: red;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.right &#123;</div><div class="line">    position: absolute;</div><div class="line">    top: 0;</div><div class="line">    right: 0;</div><div class="line">    height: 1000px;</div><div class="line">    width: 100px;</div><div class="line">    background-color: green;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.center &#123;</div><div class="line">    margin-left: 100px;</div><div class="line">    margin-right: 100px;</div><div class="line">    height: 1000px;</div><div class="line">    background-color: blue;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>2.使用 float<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">// html</div><div class="line"></div><div class="line">&lt;div class=<span class="string">"left"</span>&gt;&lt;/div&gt;</div><div class="line">&lt;div class=<span class="string">"right"</span>&gt;&lt;/div&gt;</div><div class="line">&lt;div class=<span class="string">"center"</span>&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">// css</div><div class="line">.left &#123;</div><div class="line">    <span class="built_in">float</span>: left;</div><div class="line">    height: 1000px;</div><div class="line">    width: 100px;</div><div class="line">    background-color: red;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.right &#123;</div><div class="line">    <span class="built_in">float</span>: right;</div><div class="line">    height: 1000px;</div><div class="line">    width: 100px;</div><div class="line">    background-color: green;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.center &#123;</div><div class="line">    margin-left: 100px;</div><div class="line">    margin-right: 100px;</div><div class="line">    height: 1000px;</div><div class="line">    background-color: blue;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>3.使用 display: flex（调换了right 与 center 的位置）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">// html</div><div class="line"></div><div class="line">&lt;div class=<span class="string">"left"</span>&gt;&lt;/div&gt;</div><div class="line">&lt;div class=<span class="string">"center"</span>&gt;&lt;/div&gt;</div><div class="line">&lt;div class=<span class="string">"right"</span>&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">// css</div><div class="line">body &#123;</div><div class="line">    display: flex;</div><div class="line">&#125;</div><div class="line">.left&#123;</div><div class="line">    width: 100px;</div><div class="line">    height: 1000px;</div><div class="line">    background-color: red;</div><div class="line">&#125;</div><div class="line">.center &#123;</div><div class="line">    width: 100px;</div><div class="line">    height: 1000px;</div><div class="line">    flex-grow: 1;</div><div class="line">    background-color: blue;</div><div class="line">&#125;</div><div class="line">.right&#123;</div><div class="line">    width: 100px;</div><div class="line">    height: 1000px;</div><div class="line">    background-color: green;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="float-属性-amp-清除浮动"><a href="#float-属性-amp-清除浮动" class="headerlink" title="float 属性 &amp; 清除浮动"></a>float 属性 &amp; 清除浮动</h3><p>float 属性：left，right，none，inherit</p>
+<p>问题：如何清楚浮动？<br>答案：<br>1.为带有浮动元素的父元素，添加伪元素（最佳推选）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">:after &#123;</div><div class="line">    display: block;</div><div class="line">    clear: both;</div><div class="line">    content: <span class="string">""</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>2.触发bfc，为带有浮动元素的父元素，添加 overflew：hidden<br>3.触发bfc，为带有浮动元素的父元素，添加 position：absolute<br>4.触发bfc，为带有浮动元素的父元素，添加 display：inline-block<br>5.触发bfc，为带有浮动元素的父元素，添加 zoom：1 // _zoom: 1 ie6 // *zoom: 1 ie6 ie7</p>
+<h3 id="盒子模型-amp-margin-塌陷-amp-margin-合并"><a href="#盒子模型-amp-margin-塌陷-amp-margin-合并" class="headerlink" title="盒子模型 &amp; margin 塌陷 &amp; margin 合并"></a>盒子模型 &amp; margin 塌陷 &amp; margin 合并</h3><p>盒子模型含有：<br>width 属性<br>padiing 属性： 若 4 个值（上，右，下，左），若 3 个值（上，左右，下），若 2 个值（上下，左右）<br>border 属性<br>margin 属性 若 4 个值（上，右，下，左），若 3 个值（上，左右，下），若 2 个值（上下，左右）</p>
+<p>问题：如何解决 margin 塌陷 与 margin 合并？<br>答案：<br>1.触发bfc，为含有 margin 的元素的父级，添加 overflew：hidden<br>2.触发bfc，为含有 margin 的元素的父级，添加 border</p>
+<h3 id="css-溢出打点"><a href="#css-溢出打点" class="headerlink" title="css 溢出打点"></a>css 溢出打点</h3><p>问题：css 单行如何益处打点？<br>答案：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    width: 200px;</div><div class="line">    white-space: nowrap;</div><div class="line">    text-overflow: ellipsis;</div><div class="line">    overflow: hidden;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>问题：css 多行如何益出打点？<br>答案：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    width: 200px;</div><div class="line">    display: -webkit-box;</div><div class="line">    -webkit-line-clamp: 2; // 几行就写几，这里是 3 行</div><div class="line">    -webkit-box-orient: vertical;</div><div class="line">    overflow: hidden;</div><div class="line">    text-overflow: ellipsis;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="css-伪元素-与-伪类"><a href="#css-伪元素-与-伪类" class="headerlink" title="css 伪元素 与 伪类"></a>css 伪元素 与 伪类</h3><p>css 伪元素: after，before，first-letter，first-line（使用时需要设置 content: ‘xxx’）<br>css 伪类: hover，active，focus，link，visit，lang</p>
+<h3 id="css3-兼容性"><a href="#css3-兼容性" class="headerlink" title="css3 兼容性"></a>css3 兼容性</h3><p>-moz- // firefox—-&gt;gecko<br>-ms- // ie—-&gt;trident<br>-webkit- // safari—-&gt;webkit<br>-o- // opera—-&gt;presto<br>无// chrome—-&gt;blink/webkit</p>
+<h3 id="css3-选择器"><a href="#css3-选择器" class="headerlink" title="css3 选择器"></a>css3 选择器</h3><p>css3选择器:</p>
+<p>1.css3属性选择器 ele[attr=”*(任意位置),^(开头),$(结尾)”]</p>
+<p>2.css3伪类选择器</p>
+<p>第一组：同一父级下的某个子元素<br>:first-child<br>:last-child<br>:nth-child(n) 同一父级下的第几个子元素 （正着来）<br>:nth-last-child(n) （倒着来）</p>
+<p>第二组：（常用）一类中的某个元素</p>
+<p>:first-of-type<br>:last-of-type<br>:nth-of-type(n) 一类中的第几个元素 （正着来）<br>:nth-last-of-type(n) （倒着来）</p>
+<p>3.css3条件选择器</p>
+<p>E&gt;F  F是E的直接子元素<br>E+F  F是E的兄弟节点，而且是E后面的第一个<br>E~F  F是E后面的兄弟节点</p>
+<h3 id="css3-图像变换-transform"><a href="#css3-图像变换-transform" class="headerlink" title="css3 图像变换 transform"></a>css3 图像变换 transform</h3><p>1.旋转<br>transform: rotate(…deg) / rotateX / rotateY / rotateZ / rotate3d(0/1 , 0/1 , 0/1 , …deg) // 1 变换，0 不变换</p>
+<p>2.位移<br>transform: translate(…px , …px) / translateX / translateY / translateZ / translate3d(…px , …px , …px)</p>
+<p>3.缩放<br>transform: scale(数字) ／ scaleX / scaleY / scaleZ / scale3d(数字 , 数字 , 数字)</p>
+<p>4.扭曲<br>transform: skew(…deg) / skewX / skewY</p>
+<p>5.设置变换的原点<br>translate-origin: left top / 50% 50%<br>默认变换的原点为 50% 50%，为图形的中心</p>
+<h3 id="css3-过度-transition"><a href="#css3-过度-transition" class="headerlink" title="css3 过度 transition"></a>css3 过度 transition</h3><p>css3 过度：transition</p>
+<p>transition 为一个复合属性，由下面几部分组成</p>
+<p>1.transition-property 指定过渡或者动态模拟的css属性。若全部则写 all。<br>2.transition-duration 指定过渡所需要的时间。<br>3.transition-timing-function 指定过渡函数。个属性主要有：linear 动画从头到尾的速度是相同的、<br>ease 默认，动画以低速开始，然后加快，在结束前变慢、ease-in 动画以低速开始、ease-out 动画以低速结束、ease-in-out    动画以低速开始和结束。<br>4.transition-delay 指定延迟时间。</p>
+<p>例子：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    left: 1px;</div><div class="line">    transition: all 5s linear 1s;</div><div class="line">    // 过渡全部属性，五秒完成，匀速运动，延时一秒</div><div class="line">&#125;</div><div class="line"></div><div class="line">&#123;</div><div class="line">    left: 100px;</div><div class="line">    // 若该元素 left 变成 100px，则会触发过渡</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="css3-动画-animation"><a href="#css3-动画-animation" class="headerlink" title="css3 动画 animation"></a>css3 动画 animation</h3><p>css3 动画：animation + keyframes</p>
+<p>animation 为一个复合属性，由下面几部分组成：</p>
+<p>1.animation-name：执行动画的 keyframes 的名字。<br>2.animation-duration：执行动画的总时长。<br>3.animation-timing-function：指定过渡函数。这个属性主要有：linear 动画从头到尾的速度是相同的、<br>ease 默认，动画以低速开始，然后加快，在结束前变慢、ease-in 动画以低速开始、ease-out 动画以低速结束、ease-in-out    动画以低速开始和结束。<br>4.animation-delay：执行延迟时间。<br>5.animation-direction：动画播放的方式。这个属性的值主要有：normal 正常播放模式、reverse 倒序播放、alternate 动画在奇数次正向播放偶数次倒序播放、alternate-reverse 动画在奇数次倒序播放偶数次正向播放。<br>6.animation-iteration-count：动画执行的次数。infinite 是无限次，写一个数字就是要执行几次。<br>7.animation-fill-mode：执行完动画后物体停止的位置。forwards 是停在结束的位置上、backwards 是快速执行初始帧（这个最好配合延迟来观察）、none 是回到初始帧的位置、both 是同时具有 forwards 和 backwards 的效果。<br>8.animation-play-state：控制动画的播放状态。running 是播放、paused 是暂停。</p>
+<p>keyframes 声明一个运动函数，函数为 百分比 + 样式状态 的 结合体</p>
+<p>例子：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    left: 1px</div><div class="line">    animation: move 5s linear 1s forwards;</div><div class="line">    // 运动函数 move，五秒完成，匀速运动，延时一秒，停在结束的位置</div><div class="line">&#125;</div><div class="line"></div><div class="line">@keyframes move &#123;</div><div class="line">    0% &#123;</div><div class="line">        left: 1px;</div><div class="line">    &#125;</div><div class="line">    50% &#123;</div><div class="line">        left: 2px;</div><div class="line">    &#125;</div><div class="line">    100% &#123;</div><div class="line">        left: 3px;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="css3-三维动画"><a href="#css3-三维动画" class="headerlink" title="css3 三维动画"></a>css3 三维动画</h3><p>使用三维动画：</p>
+<p>首先，给父级设置transform-style: preverse-3d<br>其次（可选/可不选），给父级设置景深: transform: prespective(…px) 或者 prespective: …px // 景深就是父级的深度<br>然后，给子级使用tranform: translateZ(…px)，形成三维效果<br>最后，调用 transform 上的各种 图形变换效果形成三维动画</p>
+<h3 id="css3-动画加速"><a href="#css3-动画加速" class="headerlink" title="css3 动画加速"></a>css3 动画加速</h3><p>动画加速:</p>
+<p>1.GPU硬件加速模式，让浏览器在渲染动画的时候从CPU转向GPU</p>
+<p>transform: transtion3d(0,0,0);<br>transform: translateZ(0);</p>
+<p>2.防止动画出现闪烁</p>
+<p>backface-visibilty: hidden;<br>prespective: …px;</p>
+<h3 id="css3-多列布局-column"><a href="#css3-多列布局-column" class="headerlink" title="css3 多列布局 column"></a>css3 多列布局 column</h3><p>多列布局:</p>
+<p>父级属性:<br>1.columns: xxx // 分成几分就写几。 复合属性，含有（column-width ／ column-count）<br>2.column-gap: xxx //  布局两列中间宽度<br>3.column-rule: 20px solid green // 布局两列中间加一横线</p>
+<p>子级属性：<br>1.column-span: all; // 此个子集元素独占完整一行</p>
+<p>例子：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">//html</div><div class="line">&lt;div class=<span class="string">"father"</span>&gt;</div><div class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">// css</div><div class="line">.father &#123;</div><div class="line">    columns: 5;</div><div class="line">    column-gap: 0px;</div><div class="line">    width: 1000px;</div><div class="line">    height: 200px;</div><div class="line">&#125;</div><div class="line">.child &#123;</div><div class="line">    height: 200px;</div><div class="line">    background-color: red;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="css3-弹性盒子-flex"><a href="#css3-弹性盒子-flex" class="headerlink" title="css3 弹性盒子 flex"></a>css3 弹性盒子 flex</h3><p>父级元素属性:<br>1.display: flex<br>2.flex-wrap: no-wrap // 超出部分不换行,会压缩子元素<br>3.flex-direction: row（横向排列） || row-reverse（横向倒序排列） || column（纵向排列） || column-reverse（纵向倒序排列）<br>4.flex-flow 为 lex-direction 和 flex-wrap 的复合属性</p>
+<p>子级元素属性:<br>1.flex-grow // 按比例分配剩余空间<br>2.flex-shrink // 按比例收缩超出空间<br>3.flex-basis // 设置伸缩基准值,相当于 width，会覆盖 width。 若基准值总和大于容器宽度，flex-basis 就等于 basis/(basis的总和) * 容器的宽度</p>
+<p>问题：弹性盒子内元素如何水平垂直居中？<br>答案：</p>
+<p>父级设置以下三个属性<br>1.display: flex;<br>1.justify-content: center;<br>2.align-items: center;</p>
+<p>例子：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">//html</div><div class="line">&lt;div class=<span class="string">"father"</span>&gt;</div><div class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</div><div class="line">    &lt;div class=<span class="string">"child"</span>&gt;&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">// css</div><div class="line">.father &#123;</div><div class="line">    display: flex;</div><div class="line">    width: 1000px;</div><div class="line">    height: 100px;</div><div class="line">    justify-content: center;</div><div class="line">    align-items: center;</div><div class="line"></div><div class="line">&#125;</div><div class="line">.child &#123;</div><div class="line">    flex-basis: 100px;</div><div class="line">    height: 50px;</div><div class="line">    background-color: blue;           </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="css3-盒子模型-box-sizing"><a href="#css3-盒子模型-box-sizing" class="headerlink" title="css3 盒子模型 box-sizing"></a>css3 盒子模型 box-sizing</h3><p>盒子模型:</p>
+<p>box-sizing: border-box // IE6混杂模式的盒模型 border + padding + content = 设置的宽／高（width: …px / height: …px）</p>
+<p>所以 border-box 的总 宽／高 = content + margin</p>
+<p>box-sizing: content-box // 标准模式的盒模型 content = 设置的宽／高（width: …px / height: …px）</p>
+<p>所以 content-box 的总 宽／高 = content +  padding + border + margin</p>
+<h3 id="css3-背景图片-background-size"><a href="#css3-背景图片-background-size" class="headerlink" title="css3 背景图片 background-size"></a>css3 背景图片 background-size</h3><p>1.contain：同比例放大或缩小，尽量让一张图以最大限度沾满容器，多出的部分重复显示</p>
+<p>2.cover：同比例放大或缩小，一张图填满容器，多余的部分隐藏。</p>
+<h3 id="移动端布局（media／rem／-）"><a href="#移动端布局（media／rem／-）" class="headerlink" title="移动端布局（media／rem／%）"></a>移动端布局（media／rem／%）</h3><p>移动端布局：</p>
+<p>1.使用 媒体查询 media，兼容不同尺寸的设备<br>@media (填写媒体查询属性) {}</p>
+<p>2.使用 rem，相对于 html 跟元素大小<br>html {font-size: 62.5% ／ …;}<br>然后在在设置 宽／高／字体大小 等属性的时候 使用 rem</p>
+<p>3.宽高使用 百分比（%）布局，还原设计图尺寸<br>高无法设置百分比，可以选用 padding-top<br>padding-top 相对于宽设置百分比</p>
+<p>4.使用 iconfont 等矢量图片，代替 png 等静态图片</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/review/" rel="tag"># review</a>
+          
+            <a href="/tags/css/" rel="tag"># css</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/23/html/" rel="next" title="html">
+                <i class="fa fa-chevron-left"></i> html
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/25/js/" rel="prev" title="js">
+                js <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/./images/mySculpture.jpg"
+               alt="段然" />
+          <p class="site-author-name" itemprop="name">段然</p>
+           
+              <p class="site-description motion-element" itemprop="description">(254).toString(16).toUpperCase()</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/duanran1996112" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://duanran1996112.github.io/duanranHome.github.io/" target="_blank" title="MyHome">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  MyHome
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#css-amp-css3"><span class="nav-number">1.</span> <span class="nav-text">css & css3</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#css-选择器"><span class="nav-number">1.1.</span> <span class="nav-text">css 选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#display-属性"><span class="nav-number">1.2.</span> <span class="nav-text">display 属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#position-属性-amp-z-index-属性-amp-三栏布局"><span class="nav-number">1.3.</span> <span class="nav-text">position 属性 & z-index 属性 & 三栏布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#float-属性-amp-清除浮动"><span class="nav-number">1.4.</span> <span class="nav-text">float 属性 & 清除浮动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#盒子模型-amp-margin-塌陷-amp-margin-合并"><span class="nav-number">1.5.</span> <span class="nav-text">盒子模型 & margin 塌陷 & margin 合并</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css-溢出打点"><span class="nav-number">1.6.</span> <span class="nav-text">css 溢出打点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css-伪元素-与-伪类"><span class="nav-number">1.7.</span> <span class="nav-text">css 伪元素 与 伪类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-兼容性"><span class="nav-number">1.8.</span> <span class="nav-text">css3 兼容性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-选择器"><span class="nav-number">1.9.</span> <span class="nav-text">css3 选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-图像变换-transform"><span class="nav-number">1.10.</span> <span class="nav-text">css3 图像变换 transform</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-过度-transition"><span class="nav-number">1.11.</span> <span class="nav-text">css3 过度 transition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-动画-animation"><span class="nav-number">1.12.</span> <span class="nav-text">css3 动画 animation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-三维动画"><span class="nav-number">1.13.</span> <span class="nav-text">css3 三维动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-动画加速"><span class="nav-number">1.14.</span> <span class="nav-text">css3 动画加速</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-多列布局-column"><span class="nav-number">1.15.</span> <span class="nav-text">css3 多列布局 column</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-弹性盒子-flex"><span class="nav-number">1.16.</span> <span class="nav-text">css3 弹性盒子 flex</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-盒子模型-box-sizing"><span class="nav-number">1.17.</span> <span class="nav-text">css3 盒子模型 box-sizing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3-背景图片-background-size"><span class="nav-number">1.18.</span> <span class="nav-text">css3 背景图片 background-size</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动端布局（media／rem／-）"><span class="nav-number">1.19.</span> <span class="nav-text">移动端布局（media／rem／%）</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">段然</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/three.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

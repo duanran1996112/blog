@@ -1,0 +1,827 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="工具," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="浅谈谷歌浏览器调试工具中的 Performance">
+<meta name="keywords" content="工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chrome 开发者工具中的 Performance">
+<meta property="og:url" content="http://yoursite.com/2018/12/03/Chrome-Performance/index.html">
+<meta property="og:site_name" content="Web 前端">
+<meta property="og:description" content="浅谈谷歌浏览器调试工具中的 Performance">
+<meta property="og:image" content="http://yoursite.com/img/Performance/Performance1.jpg">
+<meta property="og:image" content="http://yoursite.com/img/Performance/Performance2.jpg">
+<meta property="og:image" content="http://yoursite.com/img/Performance/Performance3.jpg">
+<meta property="og:image" content="http://yoursite.com/img/Performance/Performance4.jpg">
+<meta property="og:image" content="http://yoursite.com/img/Performance/Performance5.jpg">
+<meta property="og:image" content="http://yoursite.com/img/Performance/Performance6.jpg">
+<meta property="og:image" content="http://yoursite.com/img/Performance/Performance7.jpg">
+<meta property="og:image" content="http://yoursite.com/img/Performance/Performance8.jpg">
+<meta property="og:image" content="http://yoursite.com/img/Performance/Performance9.jpg">
+<meta property="og:image" content="http://yoursite.com/img/Performance/Performance10.jpg">
+<meta property="og:image" content="http://yoursite.com/img/Performance/Performance11.jpg">
+<meta property="og:updated_time" content="2018-12-03T08:45:40.686Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chrome 开发者工具中的 Performance">
+<meta name="twitter:description" content="浅谈谷歌浏览器调试工具中的 Performance">
+<meta name="twitter:image" content="http://yoursite.com/img/Performance/Performance1.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/12/03/Chrome-Performance/"/>
+
+
+
+
+
+  <title>Chrome 开发者工具中的 Performance | Web 前端</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Web 前端</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个专业的 Web 前端博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/03/Chrome-Performance/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="段然">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/./images/mySculpture.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Web 前端">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Chrome 开发者工具中的 Performance</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-03T12:30:00+08:00">
+                2018-12-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  浅谈谷歌浏览器调试工具中的 Performance
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>使用Chrome DevTools 的 performance 面板可以记录和分析页面在运行时的所有活动。</p>
+<h2 id="Let’s-Go"><a href="#Let’s-Go" class="headerlink" title="Let’s Go!"></a>Let’s Go!</h2><p>我们会用 Performance 工具去分析一个现有的在线 DEMO，然后教会你怎么去分析，从而找到性能瓶颈。</p>
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><ol>
+<li><p>由于我们的chrome浏览器安装了许多插件，这些插件的运行会影响页面的性能分析，因此最好进入一个无痕窗口。</p>
+<p><img src="/img/Performance/Performance1.jpg" alt="Performance 展示"></p>
+</li>
+<li><p>在匿名模式下打开 <a href="https://googlechrome.github.io/devtools-samples/jank/" target="_blank" rel="external">DEMO</a> 地址 </p>
+</li>
+<li><p>打开控制台 Command + Opiton + I（Mac）或者 Control + shift + I (Windows, Linux) </p>
+</li>
+</ol>
+<h3 id="模拟移动端"><a href="#模拟移动端" class="headerlink" title="模拟移动端"></a>模拟移动端</h3><p>由于 移动端 性能和 PC端 相差很大，当你想分析页面的时候，可以用 CPU 控制器（CPU Throttling）来模拟移动端设备 CPU。</p>
+<ol>
+<li><p>打开开发者工具的 Performance。</p>
+</li>
+<li><p>确保选中 Screenshots。</p>
+</li>
+<li><p>点击右侧的（⚙️）按钮，CPU 选中 4倍 低速。</p>
+<p><img src="/img/Performance/Performance2.jpg" alt="Performance 展示"></p>
+</li>
+</ol>
+<h3 id="开始记录运行时的性能"><a href="#开始记录运行时的性能" class="headerlink" title="开始记录运行时的性能"></a>开始记录运行时的性能</h3><p>  <img src="/img/Performance/Performance3.jpg" alt="Performance 展示"></p>
+<h3 id="开始分析"><a href="#开始分析" class="headerlink" title="开始分析"></a>开始分析</h3><h4 id="帧率"><a href="#帧率" class="headerlink" title="帧率"></a>帧率</h4><p>FPS（frames per second）是用来分析动画的一个主要性能指标，一般能够保持 60FPS 的话就很流畅了。通过 fps 图标发现是一个红色的长条，表面这些帧存在问题，存在卡顿，用户体验很差。一般在流畅的网页中，fps 呈现绿色。绿色的长条越高，说明 FPS 越高，用户体验越好。</p>
+<p>  <img src="/img/Performance/Performance4.jpg" alt="Performance 展示"></p>
+<h4 id="CPU-图表"><a href="#CPU-图表" class="headerlink" title="CPU 图表"></a>CPU 图表</h4><p>在 CPU 图表中的各种颜色与 Summary 面板里的颜色是相互对应的，Summary 面板就在 Performance 面板的下方。CPU 图表中的各种颜色代表着在这个时间段内，CPU 在各种处理上所花费的时间。如果你看到了某个处理占用了大量的时间，那么这可能就是一个可以找到性能瓶颈的线索。</p>
+<p>  <img src="/img/Performance/Performance5.jpg" alt="Performance 展示"></p>
+<h4 id="NET-amp-Network"><a href="#NET-amp-Network" class="headerlink" title="NET &amp; Network"></a>NET &amp; Network</h4><p>NET 中每条横杠表示一种资源，横杠越长，表示请求资源所需的时间越长。每个横杠的浅色部分表示等待时间。在 Network 部分，显示详细的请求结果。</p>
+<h4 id="屏幕快照"><a href="#屏幕快照" class="headerlink" title="屏幕快照"></a>屏幕快照</h4><p>鼠标放在屏幕快照区域可以看出当时屏幕的截图，左右移动可以分析动画的细节。</p>
+<p>  <img src="/img/Performance/Performance6.jpg" alt="Performance 展示"></p>
+<h4 id="Frames-图表"><a href="#Frames-图表" class="headerlink" title="Frames 图表"></a>Frames 图表</h4><p>在 Frames 图表中，把鼠标移动到绿色条状图上，DevTools 会展示这个帧的 FPS。每个帧可能都在 60 以下，都没有达到 60 的标准。</p>
+<p>  <img src="/img/Performance/Performance7.jpg" alt="Performance 展示"></p>
+<h3 id="定位问题"><a href="#定位问题" class="headerlink" title="定位问题"></a>定位问题</h3><ol>
+<li><p>通过查看 Summary 面板，发现 CPU 大量的时间花费在 render 上。</p>
+<p><img src="/img/Performance/Performance8.jpg" alt="Performance 展示"></p>
+</li>
+<li><p>展开 Main 图表，DevTools 展示了主线程运行状况。X轴代表着时间。每个长条代表着一个 event。长条越长就代表这个 event 花费的时间越长。Y轴代表了调用栈（call stack）。在栈里，上面的 event 调用了下面的 event。</p>
+<p><img src="/img/Performance/Performance9.jpg" alt="Performance 展示"></p>
+</li>
+<li><p>在性能报告中，有很多的数据。可以通过双击，拖动等等动作来放大缩小报告范围，从各种时间段来观察分析报告。</p>
+</li>
+<li><p>在事件长条的右上角出，如果出现了红色小三角，说明这个事件是存在问题的，需要特别注意。</p>
+</li>
+<li><p>双击这个带有红色小三角的的事件。在 Summary 面板会看到详细信息。如果点击了 app.js:95 这个链接，就会跳转到对应的代码处。</p>
+<p><img src="/img/Performance/Performance10.jpg" alt="Performance 展示"></p>
+</li>
+<li><p>在 app.update 这个事件的长条下方，有很多被触发的紫色长条。如果放大这些事件长条，你会看到它们每个都带有红色小三角。点击其中一个紫色事件长条，DevTools 在Summary 面板里展示了更多关于这个事件的信息。确实，这里有很多 reflow 的警告。在 summary 面板里点击 app.js:70 链接，DevTools 会跳转到需要优化的代码处。</p>
+<p><img src="/img/Performance/Performance11.jpg" alt="Performance 展示"></p>
+</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/工具/" rel="tag"># 工具</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/22/谷歌浏览器调试工具/" rel="next" title="浅谈谷歌浏览器调试工具">
+                <i class="fa fa-chevron-left"></i> 浅谈谷歌浏览器调试工具
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/./images/mySculpture.jpg"
+               alt="段然" />
+          <p class="site-author-name" itemprop="name">段然</p>
+           
+              <p class="site-description motion-element" itemprop="description">(254).toString(16).toUpperCase()</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/duanran1996112" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://duanran1996112.github.io/duanranHome.github.io/" target="_blank" title="MyHome">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  MyHome
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Let’s-Go"><span class="nav-number">2.</span> <span class="nav-text">Let’s Go!</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#准备"><span class="nav-number">2.1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模拟移动端"><span class="nav-number">2.2.</span> <span class="nav-text">模拟移动端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始记录运行时的性能"><span class="nav-number">2.3.</span> <span class="nav-text">开始记录运行时的性能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开始分析"><span class="nav-number">2.4.</span> <span class="nav-text">开始分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#帧率"><span class="nav-number">2.4.1.</span> <span class="nav-text">帧率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CPU-图表"><span class="nav-number">2.4.2.</span> <span class="nav-text">CPU 图表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NET-amp-Network"><span class="nav-number">2.4.3.</span> <span class="nav-text">NET & Network</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#屏幕快照"><span class="nav-number">2.4.4.</span> <span class="nav-text">屏幕快照</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Frames-图表"><span class="nav-number">2.4.5.</span> <span class="nav-text">Frames 图表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定位问题"><span class="nav-number">2.5.</span> <span class="nav-text">定位问题</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">段然</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/three.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

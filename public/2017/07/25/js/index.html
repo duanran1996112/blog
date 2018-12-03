@@ -1,0 +1,939 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="review,js," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="es5 + dom + bom + 正则 基础内容">
+<meta name="keywords" content="review,js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js">
+<meta property="og:url" content="http://yoursite.com/2017/07/25/js/index.html">
+<meta property="og:site_name" content="Web 前端">
+<meta property="og:description" content="es5 + dom + bom + 正则 基础内容">
+<meta property="og:updated_time" content="2017-08-01T10:21:23.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js">
+<meta name="twitter:description" content="es5 + dom + bom + 正则 基础内容">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/25/js/"/>
+
+
+
+
+
+  <title>js | Web 前端</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Web 前端</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个专业的 Web 前端博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/25/js/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="段然">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/./images/mySculpture.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Web 前端">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">js</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-25T10:24:18+08:00">
+                2017-07-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/review/" itemprop="url" rel="index">
+                    <span itemprop="name">review</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/review/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  es5 + dom + bom + 正则 基础内容
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="js"><a href="#js" class="headerlink" title="js"></a>js</h2><h3 id="es5"><a href="#es5" class="headerlink" title="es5"></a>es5</h3><h4 id="js-数据类型"><a href="#js-数据类型" class="headerlink" title="js 数据类型"></a>js 数据类型</h4><p>js 基本数据类型（5种： Number，String，Boolean，undefined(未定义)，null(空)</p>
+<p>原始值：Number，String，Boolean，undefined，null</p>
+<p>引用值：object(array)，function，date()，regExp()</p>
+<p>默认为 false 的值：undefined，null，””，NaN，0，false</p>
+<h4 id="typeof-amp-类型转换"><a href="#typeof-amp-类型转换" class="headerlink" title="typeof &amp; 类型转换"></a>typeof &amp; 类型转换</h4><p>typeof 的返回值（6种）：numner、string、boolean、undefined、object、function</p>
+<p>类型转换：<br>1.Number：Number(mix) 把<font color="red">其他类型</font>的数据转换成 数字类型 的数据。<br>2.String: String(mix) 把<font color="red">其他类型</font>的数据转换成 字符串类型 的数据。<br>3.Boolean: boolean(mix) 把<font color="red">其他类型</font>的数据转换成 布尔类型 的数据。<br>4.parseInt: parseInt(string,radix) 把<font color="red">字符串</font>的数据转换成 整型 数字类型 的数据。当 radix 不为空的时候，我们把第一个参数的数字当成几进制的数字来转换成十进制。<br>5.parseFloat: parseFloat(string) 把<font color="red">字符串</font>的数据转换成 浮点型 数字类型 的数据。<br>6.toString: obj.toString(mix) 把<font color="red">其他类型</font>的数据转换成 字符串类型 的数据。undefined 和 null 没有 toString 方法。</p>
+<h4 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h4><p>预编译步骤（4步骤）：<br>1.创建 AO 对象。<br>2.寻找形参和变量声明，将变量和形参作为AO对象的属性名添加到对象中，值为undefined。值得注意的是，函数声明不叫变量。<br>3.将实参值和形参值相统一。<br>4.在函数体里面寻找函数声明，将函数名作为属性名，值为这个函数的函数体。</p>
+<h4 id="对象-Object-amp-new-操作符"><a href="#对象-Object-amp-new-操作符" class="headerlink" title="对象 Object &amp; new 操作符"></a>对象 Object &amp; new 操作符</h4><p>创建一个对象（4种方法）：<br>1.对象字面量：var obj = {};<br>2.构造函数：var obj = new Object();<br>3.自定义构造函数：function Obj() {}; var obj = new Obj();<br>4.Object.create：var obj = Object.create({});</p>
+<p>对象的增删改查：<br>1.增 obj.xxx = xxx;<br>2.改 obj.xxx = xxx;<br>3.查 obj.xxx<br>3.删 delete obj.xxx;</p>
+<p>new 操作符：<br>问题：构造函数中 new 操作符干了什么？<br>答案：<br>1.在构造函数中，隐士的创建一个为 this 的空对象 var this = {};<br>2.在构造函数中，为 this 这个空对象添加属性 this.xxx = xxx;<br>3.在构造函数中，隐士的 return 这个添加了属性的 this 对象，return this;</p>
+<h4 id="原型（prototype）-amp-原型链"><a href="#原型（prototype）-amp-原型链" class="headerlink" title="原型（prototype） &amp; 原型链"></a>原型（prototype） &amp; 原型链</h4><p>原型定义: 原型是 function 对象的一个属性，它是构造函数制造出来的对象的公共祖先。通过这个构造函数产生的对象，可以继承该原型的属性和方法。原型也是对象。</p>
+<p>构造函数可以通过 function.prototype = {}; 来 添加 / 修改 原型上的属性<br>对象可以通过 object.<strong>proto</strong> = {}; 来 添加 / 修改 原型上的属性</p>
+<p>注意：undefined，null 没有原型</p>
+<p>原型链定义: 原型的对象还有自己的原型，这样原型上还有原型的结构就构成了原型链。</p>
+<p>例子：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">Father.prototype = &#123;</div><div class="line">    like: <span class="string">"you"</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">Father</span></span> () &#123;</div><div class="line">    this.name = <span class="string">"duanran"</span>;</div><div class="line">    this.age = 18;</div><div class="line">&#125;</div><div class="line"></div><div class="line">Son.prototype = new Father();</div><div class="line"></div><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">Son</span></span> () &#123;</div><div class="line">    this.height = <span class="string">'180'</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var son = new Son();</div><div class="line"></div><div class="line">son.__proto__ = &#123;</div><div class="line">    name: <span class="string">"DuanRan"</span> // 修改原型的 name 属性</div><div class="line">&#125;</div><div class="line"></div><div class="line">console.log(son);</div></pre></td></tr></table></figure></p>
+<h4 id="this"><a href="#this" class="headerlink" title="this"></a>this</h4><p>this 的指向：<br>1.预编译过程中 this –&gt; window<br>2.全局作用域 this –&gt; window<br>3.call / apply 可以改变 this 的指向<br>4.obj.function()，function() 中的 this 指向 obj，谁调用 this，this指向谁</p>
+<p>改变 this 的指向（3种）：<br>1.bind：bind 函数用于将 当前函数 和 指定对象 绑定，返回一个 新的函数。当 新函数 被调用时，代码会在 指定对象 的 上下文 中执行。<br>2.call：Function.prototype 的一个方法。为了改变某个函数运行时的上下文。第一个参数为运行的上下文。<br>3.apply：Function.prototype 的一个方法。为了改变某个函数运行时的上下文。第一个参数为运行的上下文。</p>
+<p>call ／ apply 区别：除了第一个参数，call 后面的 参数 是 一个一个 传的，而 apply 后面的 参数 是 放进 一个数组里 传的。</p>
+<h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><p>继承（6种方法）：<br>1.原型链继承<br>function Father () {}<br>function Son () {}<br>Son.prototype = new Father()</p>
+<p>缺点：会继承过多没有用的属性，造成大量的浪费。</p>
+<p>2.构造函数继承 call / apply<br>function Father () {}<br>function Son () {Father.call(this)}</p>
+<p>缺点：种方式不属于继承，也访问不了原型的原型。每次构造一个对象都要走两个构造函数，效率很低。</p>
+<p>3.共享原型<br>function Father () {}<br>function Son () {}<br>Son.prototype = Father.prototype;</p>
+<p>缺点：没办法改变子类的原型，一改就两个一起改了。</p>
+<p>4.object.create()<br>function Father () {}<br>var son = Object.create(new Father);</p>
+<p>5.圣杯模式<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var inherit = (<span class="function"><span class="title">function</span></span> ()&#123;</div><div class="line">    var F = <span class="function"><span class="title">function</span></span>()&#123;&#125;;</div><div class="line">    <span class="built_in">return</span> <span class="keyword">function</span> (C,P)&#123;</div><div class="line">        F.prototype = P.prototype;</div><div class="line">        C.prototype = new F();</div><div class="line">        C.prototype.constructor = C;</div><div class="line">        C.prototype.uber = P;</div><div class="line">    &#125;</div><div class="line">&#125;());</div></pre></td></tr></table></figure></p>
+<p>F 函数的作用：沟通 P 和 C 的原型，这样我们改变 C 的原型的时候只会影响 F 而不会影响 P。</p>
+<p>6.extands（es6 方法）<br>class Father {}<br>class Son extands Father {}</p>
+<h4 id="作用域-amp-闭包"><a href="#作用域-amp-闭包" class="headerlink" title="作用域 &amp; 闭包"></a>作用域 &amp; 闭包</h4><p>作用域: 变量和函数生效的区域。</p>
+<p>作用域链: 函数可以产生作用域，函数又可以嵌套，作用域之间就会产生嵌套关系，就产生了作用域链。</p>
+<p>闭包: 闭包就是能够读取其他函数内部变量的函数</p>
+<p>闭包定义: 在一个 函数内部 再定义 一个函数，并且这个 内部函数 与 外部函数 的 变量 有关联，通过返回这个 内部的函 来 访问 外部函数 里面的 变量。</p>
+<p>立即执行函数: 解闭包的一个重要方法，通过另一个新闭包来消除上一个闭包的影响<br>(function () {} ())<br>(function () {})()</p>
+<p>例子：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">myAge</span></span> () &#123;</div><div class="line">    var age = 0;</div><div class="line">    <span class="built_in">return</span> &#123;</div><div class="line">        add: <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">            age++;</div><div class="line">        &#125;,</div><div class="line">        say: <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">            console.log(age);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var my = myAge();</div><div class="line">my.say(); // 0</div><div class="line">my.add();</div><div class="line">my.add();</div><div class="line">my.say(); // 2</div></pre></td></tr></table></figure></p>
+<h4 id="数组-Array"><a href="#数组-Array" class="headerlink" title="数组 Array"></a>数组 Array</h4><p>创建一个数组（2种方法）：<br>1.数组字面量：var arr = [];<br>2.数组构造函数：var arr = new Array();</p>
+<p>注意：数组可以溢出写，不可以溢出读</p>
+<p>数组上的方法：改变原数组，不改变原数组</p>
+<h5 id="改变原数组"><a href="#改变原数组" class="headerlink" title="改变原数组"></a>改变原数组</h5><p>1.push 后进 ／ pop 后出</p>
+<p>2.unshift 头进 ／ shift 头出</p>
+<p>3.splice 截取 ／ 删除 ／ 插入<br>a.splice(b,c,1,2,3); // 在 a 中 从 b 位置截取到 c 位置，并替换成 1，2，3</p>
+<p>4.reverse 倒叙</p>
+<p>5.sort 排序 可对字符串进行排序<br>若不传参数：按照字符的编码顺序进行排序。例：’a’在’b’前 , ‘11’在’12’前<br>若传参数：接受一个函数作为参数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">a.sort(<span class="keyword">function</span> (a,b) &#123; 函数中可以传递两个参数</div><div class="line">    <span class="built_in">return</span> ; // <span class="built_in">return</span>一个数值</div><div class="line">             // 值为正a在b前</div><div class="line">             // 值为负a在b后</div><div class="line">    <span class="built_in">return</span> a - b; // 从小到大排序</div><div class="line">    <span class="built_in">return</span> b - a; // 从大到小排序</div><div class="line">    retutn Math.random() - 0.5 // 乱序</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>sort 的原理（自我感觉…）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> sort (arr) &#123;</div><div class="line">    <span class="keyword">for</span>(var i = 0 ; i &lt; arr.length ; i++) &#123;</div><div class="line">        <span class="keyword">for</span>(var j = i + 1 ; j &lt; arr.length ; j++) &#123;</div><div class="line">            <span class="keyword">if</span>((arr[i] - arr[j]) &gt; 0) &#123;</div><div class="line">                var t = arr[i];</div><div class="line">                arr[i] = arr[j];</div><div class="line">                arr[j] = t;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h5 id="不改变原数组"><a href="#不改变原数组" class="headerlink" title="不改变原数组"></a>不改变原数组</h5><p>1.concat 连接<br>var a = b.concat(c); // a 数组为 b 数组 连接 c 数组</p>
+<p>2.slice 截取<br>var a = b.slice(c,d); // a 数组为 在 b 中，从 c 位置 截取到 d 位置</p>
+<p>3.join 连接<br>var a = b.join(); // 若 不传 参数，则以 逗号 连接</p>
+<p>4.(…) 扩展运算符 起到连接数组的作用<br>var a = [1,2,…b]; // a 数组为 1，2，连接 b 数组</p>
+<h5 id="es5-数组上的新方法"><a href="#es5-数组上的新方法" class="headerlink" title="es5 数组上的新方法"></a>es5 数组上的新方法</h5><p>1.forEach() // 改变原数组,遍历数组中每一个元素<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">arr.forEach(<span class="keyword">function</span> (value,index,arr) &#123;</div><div class="line">    // value 值</div><div class="line">    // index 序号</div><div class="line">    // arr 整个数组</div><div class="line">    ...</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>2.map() // 不改变原数组,遍历数组中每一个元素，进行操作 并 返回一个新的数组<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr1 = arr.forEach(<span class="keyword">function</span> (value,index,arr) &#123;</div><div class="line">    ...</div><div class="line">    <span class="built_in">return</span> ...;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>3.filter() // 不改变原数组,遍历数组中每一个元素，进行过滤 并 返回一个新的数组<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var arr1 = arr.forEach(<span class="keyword">function</span> (value,index,arr) &#123;</div><div class="line">    ...</div><div class="line">    <span class="built_in">return</span> <span class="literal">true</span> / <span class="literal">false</span>;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>4.<br>some() 不改变原数组,遍历数组中每一个元素,返回一个布尔值<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var boolen = arr.some(<span class="keyword">function</span> (value,index,arr) &#123;</div><div class="line">    <span class="built_in">return</span> <span class="literal">true</span> / <span class="literal">false</span>;</div><div class="line">    // 有一组数据 <span class="built_in">return</span> 出来则成功</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>every() 不改变原数组,遍历数组中每一个元素<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var boolen = arr.every(<span class="keyword">function</span> (value,index,arr) &#123;</div><div class="line">    <span class="built_in">return</span> <span class="literal">true</span> / <span class="literal">false</span>;</div><div class="line">    // 全部数据 <span class="built_in">return</span> 出来才成功</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>5.<br>reduce() 不改变原数组,从左向右依次选出两个值进行合并,返回一个布尔值<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var num = arr.reduce(<span class="keyword">function</span> (a,b) &#123;</div><div class="line">    <span class="built_in">return</span> a + b;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<p>reduceRight() 不改变原数组,从右向左依次选出两个值进行合并<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var num = arr.reduceRight(<span class="keyword">function</span> (a,b) &#123;</div><div class="line">    <span class="built_in">return</span> a + b;</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h4 id="数组去重-amp-克隆（潜层-amp-深层）"><a href="#数组去重-amp-克隆（潜层-amp-深层）" class="headerlink" title="数组去重 &amp; 克隆（潜层 &amp; 深层）"></a>数组去重 &amp; 克隆（潜层 &amp; 深层）</h4><h5 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h5><p>方法一：<br>数组中的这个数据出现过一次之后，就在一个对象中将这个元素的值的位置标记成 1。后面如果出现相同的属性值，因为这个位置已经是1了，所以就不会添加到新数组里面，从而达到了去重的效果。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">Array.prototype.unique = <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">    var len = this.length,</div><div class="line">    arr = [],</div><div class="line">    obj = &#123;&#125;;</div><div class="line">    <span class="keyword">for</span> (var i = 0; i &lt; len; i++) &#123;</div><div class="line">        <span class="keyword">if</span> (!obj[this[i]]) &#123;</div><div class="line">            obj[this[i]] = 1;</div><div class="line">            arr.push(this[i]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> arr;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>方法二：<br>利用 es6 中的 set 数据结构，该数据结构会消除 数组中 相同的值。再将 set 结构转化回数组结构。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Array.prototype.dedupe = <span class="keyword">function</span> &#123; </div><div class="line">    <span class="built_in">return</span> Array.from(new Set(this));</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="克隆"><a href="#克隆" class="headerlink" title="克隆"></a>克隆</h5><p>浅层克隆（缺点：无法真正克隆引用值）源对象 里面有什么属性，目标对象 就有什么属性。但是当属性是属性是引用值的时候，改变源对象目标对象也会发生改变。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="built_in">clone</span>(src, tar) &#123; // src 源对象，tar 目标对象</div><div class="line">    var tar = tar || &#123;&#125;; </div><div class="line">    <span class="keyword">for</span>(var prop <span class="keyword">in</span> src) &#123;</div><div class="line">        tar[prop] = src[prop];</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> tar; </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>深层克隆：利用 递归调用 的方法，当检测到 源对象 里面的这个属性值是引用类型的。就在 目标对象 里面也创建一个 引用类型 的属性，如果是 数组 就 创建数组，如果是 对象 就 创建对象。将 源对象 里面的这个 引用值 和 目标对象 里面的 引用值 分别当做 新的 源对象 和 目标对象 进行克隆。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> deepCopy(src,tar)&#123;</div><div class="line">    var tar= tar|| &#123;&#125; ;</div><div class="line">    <span class="keyword">for</span> (var prop <span class="keyword">in</span> src)&#123;</div><div class="line">        <span class="keyword">if</span> (typeof(src[prop]) == <span class="string">'object'</span>)&#123;</div><div class="line">            tar[prop] = (src[prop].constructor === Array ) ? [] : &#123;&#125;;</div><div class="line">            deepCopy(src[prop],tar[prop]);</div><div class="line">        &#125;<span class="keyword">else</span> &#123;</div><div class="line">            tar[prop] = src[prop];</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> tar;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="类数组"><a href="#类数组" class="headerlink" title="类数组"></a>类数组</h4><p>类数组：类数组并不是一个数组，但是它可以表现出数组的特性。</p>
+<p>类数组的关键为一个 length 属性，代表其的长度<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var arr = &#123;</div><div class="line">    <span class="string">"0"</span>: <span class="string">"1"</span>,</div><div class="line">    <span class="string">"1"</span>: <span class="string">"2"</span>,</div><div class="line">    <span class="string">"2"</span>: <span class="string">"3"</span>,</div><div class="line">    <span class="string">"length"</span>: <span class="string">"3"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>问题：类数组运用在那里？<br>答案：jquery，zepto 的选择器，选出来的就是类数组</p>
+<h3 id="dom"><a href="#dom" class="headerlink" title="dom"></a>dom</h3><h4 id="节点的类型"><a href="#节点的类型" class="headerlink" title="节点的类型"></a>节点的类型</h4><p>节点的类型 与 对应的 nodeType（可用 nodeType 查看节点的 类型）</p>
+<p>元素节点————&gt;1 // 例：&lt;div&gt;<br>属性节点————&gt;2 // 例：id,class<br>文本节点————&gt;3 // 例：123<br>注释节点————&gt;8 // 例：&lt;!—— ——&gt;<br>document————&gt;9 // 例：#doucment<br>DocumentFragment————&gt;11</p>
+<h4 id="选择元素节点"><a href="#选择元素节点" class="headerlink" title="选择元素节点"></a>选择元素节点</h4><p>选择元素节点的方法（6种）：<br>1.document.getElementById  // 在ie8以下的浏览器中，不区分大小写，而且标签的name属性也可以被当做id被选择出来<br>2.document.getElementsByClassName // ie8及以下的版本中没有这种方法<br>3.document.getElementsByTagName // 兼容所有浏览器<br>4.document.getElementsByName // 只有部分标签的name可以生效，表单、表单元素、img、iframe<br>css选择器:<br>5.querySelector() // ie7及以下的版本中没有这种方法<br>6.querySelectorAll() // ie7及以下的版本中没有这种方法</p>
+<h4 id="遍历节点树-amp-遍历元素节点树"><a href="#遍历节点树-amp-遍历元素节点树" class="headerlink" title="遍历节点树 &amp; 遍历元素节点树"></a>遍历节点树 &amp; 遍历元素节点树</h4><p>节点树的遍历：<br>1.dom.parentNode 查找父节点<br>2.dom.childNodes 查找子节点们<br>3.dom.firstChild 第一个子节点<br>4.dom.lastChild 最后一个子节点<br>5.dom.nextSibling 下一个兄弟节点<br>6.dom.previousSibling 上一个兄弟节点</p>
+<p>元素节点树的遍历：<br>1.dom.parentElement 返回当前元素的父元素节点<br>2.dom.children 所有子元素节点<br>3.dom.childElementCount 这个属性就是子元素节点的数量<br>//  dom.children.length === dom.childElementCount<br>4.dom.nextElementSibling 下一个兄弟元素节点<br>5.dom.previousElementSibling 上一个兄弟元素节点</p>
+<h4 id="增-／-插-／-替换-／-删除-操作"><a href="#增-／-插-／-替换-／-删除-操作" class="headerlink" title="增 ／ 插 ／ 替换 ／ 删除 操作"></a>增 ／ 插 ／ 替换 ／ 删除 操作</h4><p>新增 dom 元素：<br>1.创建元素节点 document.createElement()<br>2.创建文本节点 document.createTextNode()<br>3.创建注释节点 document.createComment()<br>4.创建文档碎片 document.createDocumentFragment()</p>
+<p>插入 dom 元素：<br>1.dom1.appendChild(dom2); // 在 dom1 中最后的位置插入 dom2<br>2.dom1.insertBefore(dom2, dom3); // 在 dom1 下，把 dom2 插入到 dom3 前</p>
+<p>问题：insertAfter 怎么封装？<br>答案：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Element.prototype.insertAfter = <span class="keyword">function</span> (ele1,ele2) &#123;</div><div class="line">    <span class="keyword">if</span>(ele2.nextElementSibling) &#123;</div><div class="line">        var nextElement = ele2.nextElementSibling;</div><div class="line">        this.insertBefore(ele1,nextElement);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        this.appendChild(ele1);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>替换 dom 元素：<br>1.dom1.replaceChild(dom2, dom3) // 在 dom1 下，用 dom2 替换 dom3 </p>
+<p>删除 dom 元素：<br>1.dom1.removeChild(dom2) // 在 dom1 下，删除 dom2</p>
+<h4 id="元素节点的-属性-amp-方法"><a href="#元素节点的-属性-amp-方法" class="headerlink" title="元素节点的 属性 &amp; 方法"></a>元素节点的 属性 &amp; 方法</h4><p>元素节点的属性：<br>1.dom.innerHTML() dom 元素里面的HTML结构，可以获取 也可以修改<br>2.dom.innerText() / dom.textContent() dom 元素里面的 文本 结构，可以获取 也可以修改<br>innerText 老版本的火狐浏览器不兼容，textContent 老版本的IE浏览器不兼容。</p>
+<p>元素节点的方法：<br>1.dom.getAttribute(‘id / class / …’) 获取元素的行间属性<br>2.dom.setAttribute(‘id / class / …’, ‘属性值’) 设置元素的行间属性</p>
+<h4 id="脚本化-css"><a href="#脚本化-css" class="headerlink" title="脚本化 css"></a>脚本化 css</h4><p>注意：在 js 代码中，css 属性要使用 小驼峰式 写法<br>例子：background-color —&gt; backgroundColor</p>
+<h5 id="获取-css-样式"><a href="#获取-css-样式" class="headerlink" title="获取 css 样式"></a>获取 css 样式</h5><p>1.window.getComputedStyle(dom,’伪元素’).css; // 主流浏览器</p>
+<p>var div = document.getElementsByTagName(‘div’)[0];<br>window.getComputedStyle(div, ‘after’).width;</p>
+<p>2.dom.currentStyle.css // ie</p>
+<p>var div = document.getElementsByTagName(‘div’)[0];<br>div.currentStyle.width;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> getStyle(obj, prop, fake) &#123;</div><div class="line">    var fake = fake || null;</div><div class="line">    <span class="keyword">if</span>(obj.currentStyle) &#123;</div><div class="line">        <span class="built_in">return</span> obj.currentStyle[prop];</div><div class="line">    &#125;<span class="keyword">else</span> &#123;</div><div class="line">        <span class="built_in">return</span> window.getComputedStyle(obj, fake)[prop];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="查看元素的-几何-尺寸"><a href="#查看元素的-几何-尺寸" class="headerlink" title="查看元素的 几何 尺寸"></a>查看元素的 几何 尺寸</h5><p>1.dom.getBoundingClientRect().css（css 的值为 width / height / left / right / top / bottom ）// 获取元素的 宽 ／ 高 ／ left ／ right ／ top ／ bottom</p>
+<p>var div = document.getElementsByTagName(‘div’)[0];<br>div.getBoundingClientRect().width;</p>
+<p>2.dom.offsetWidth / dom.offsetHeight / dom.offsetLeft / dom.offsetRight / dom.offsetTop / dom.offsetBottom // 获取元素的 宽 ／ 高 ／ left ／ right ／ top ／ bottom</p>
+<h5 id="赋值-css-属性"><a href="#赋值-css-属性" class="headerlink" title="赋值 css 属性"></a>赋值 css 属性</h5><p>1.dom.style.css // 赋值的 属性 为 行间样式<br>附加说明：改方法也可以查看 已有 的 行间样式。但是没有这个行间属性，获取出的值则是 undefined</p>
+<p>var div = document.getElementsByTagName(‘div’)[0];<br>div.style.left = ‘100px’;</p>
+<h4 id="滚动条-滚动距离-amp-视口尺寸-大小"><a href="#滚动条-滚动距离-amp-视口尺寸-大小" class="headerlink" title="滚动条 滚动距离 &amp; 视口尺寸 大小"></a>滚动条 滚动距离 &amp; 视口尺寸 大小</h4><p>滚动条滚动的距离:<br>1.window.pageYOffset ／ window.pageXOffset  // 主流浏览器<br>2.document.body.scrollTop ／ doucment.body.scrollLeft // ie</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">getScrollOffset</span></span>()&#123;</div><div class="line">    <span class="keyword">if</span>(window.pageYOffset) &#123;</div><div class="line">        <span class="built_in">return</span> &#123;</div><div class="line">            x: window.pageXOffset,</div><div class="line">            y: window.pageYOffset</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> &#123;</div><div class="line">        x: document.body.scollTop,</div><div class="line">        y: document.body.scrollLeft</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>查看视口尺寸：<br>1.window.innerHeight ／ window.innerwidth // 主流浏览器<br>2.document.body.clientHeight ／ document.body.clientWidth // ie</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">getViewportOffset</span></span> () &#123;</div><div class="line">    <span class="keyword">if</span>(window.innerWidth) &#123;</div><div class="line">        <span class="built_in">return</span> &#123;</div><div class="line">            w: window.innerWidth,</div><div class="line">            h: window.innerHeight</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> &#123;</div><div class="line">        w: document.body.clientWidth,</div><div class="line">        h: document.body.clientHeight</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h4><h5 id="绑定事件"><a href="#绑定事件" class="headerlink" title="绑定事件"></a>绑定事件</h5><p>绑定事件：</p>
+<p>主流浏览器：dom.addEventListener(事件名称, 回掉函数, false) // 是否开启事件捕获<br>ie：dom.attachEvent(事件名称, 回掉函数)<br>其他：dom.onclick = function () {} 句柄绑定</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> attachEvent(ele, <span class="built_in">type</span>, handle) &#123;</div><div class="line">    <span class="keyword">if</span> (ele.addEventListener) &#123;</div><div class="line">        ele.addEventListener(<span class="built_in">type</span>, handle, null);</div><div class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (ele.attachEvent) &#123;</div><div class="line">        ele[<span class="string">'temp'</span> + <span class="built_in">type</span> + handle] = handle;</div><div class="line">        ele[<span class="built_in">type</span> + handle] = <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">            ele[<span class="string">'temp'</span> + <span class="built_in">type</span> + handle].call(ele);</div><div class="line">        &#125;;</div><div class="line">        ele.attachEvent(<span class="string">'on'</span> + <span class="built_in">type</span>, ele[<span class="built_in">type</span> + handle]);</div><div class="line">    &#125;<span class="keyword">else</span> &#123;</div><div class="line">        ele[<span class="string">'on'</span> + <span class="built_in">type</span>] = handle;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="解除事件"><a href="#解除事件" class="headerlink" title="解除事件"></a>解除事件</h5><p>解除事件：</p>
+<p>主流浏览器：dom.removeEventListener(事件名称, 回掉函数, false)<br>ie：dom.detachEvent(事件名称, 回掉函数)<br>其他：dom.onclick = null </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> remvoeEvent(ele, <span class="built_in">type</span>, handle) &#123;</div><div class="line">    <span class="keyword">if</span>(ele.removeEventListener) &#123;</div><div class="line">        ele.removeEventListener(<span class="built_in">type</span>, handle, <span class="literal">false</span>);</div><div class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (ele.detachEvent) &#123;</div><div class="line">        ele.detachEvent(<span class="string">'on'</span> + <span class="built_in">type</span>, handle);</div><div class="line">    &#125;<span class="keyword">else</span> &#123;</div><div class="line">        ele[<span class="string">'on'</span> + <span class="built_in">type</span>] = null;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="取消事件冒泡"><a href="#取消事件冒泡" class="headerlink" title="取消事件冒泡"></a>取消事件冒泡</h5><p>什么是事件冒泡：同一事件，子元素 冒泡 向 父元素，并执行 父元素 的事件</p>
+<p>取消事件冒泡：</p>
+<p>主流浏览器：event.stopPropagation();<br>ie：event.cancelBubble = true;</p>
+<p>注意：focus、blur、change、submit、reset、select 等方法就没有事件冒泡现象</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> cancelHandler(event) &#123;</div><div class="line">    <span class="keyword">if</span>(event.preventDefault) &#123;</div><div class="line">        event.preventDefault();</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        event.returnValue = <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="阻止默认事件"><a href="#阻止默认事件" class="headerlink" title="阻止默认事件"></a>阻止默认事件</h5><p>阻止默认事件：</p>
+<p>主流浏览器：event.preventDefault();<br>ie：event.returnValue = false;<br>其他：return false;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> cancelHandler(event) &#123;</div><div class="line">    <span class="keyword">if</span>(event.preventDefault) &#123;</div><div class="line">        event.preventDefault();</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        event.returnValue = <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="事件捕获-amp-事件冒泡"><a href="#事件捕获-amp-事件冒泡" class="headerlink" title="事件捕获 &amp; 事件冒泡"></a>事件捕获 &amp; 事件冒泡</h5><p>事件捕获：结构上（非视觉上）嵌套关系的元素，会存在事件捕获功能，同一事件，自父元素捕获至子元素，结构上的自顶向下。</p>
+<p>dom.addEventListener(‘’,function () {} ,true) // true 开启事件捕获</p>
+<p>事件冒泡：在结构上（非视觉上）嵌套关系的元素，会存在事件冒泡的功能，同一事件，子元素冒泡向父元素，结构上的自底向上。</p>
+<h5 id="事件委托-amp-事件源对象"><a href="#事件委托-amp-事件源对象" class="headerlink" title="事件委托 &amp; 事件源对象"></a>事件委托 &amp; 事件源对象</h5><p>什么是事件委托：父级添加事件，由于事件冒泡，点击子元素会调用父元素上的方法，这种方法被称为事件委托。被点击子元素被称为事件源对象</p>
+<p>寻找事件源对象：</p>
+<p>火狐：event.srcElement<br>ie：event.target<br>chrome：都支持</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">dom.onclick = <span class="keyword">function</span> (e) &#123;</div><div class="line">    var target = e.target || e.srcElement;</div><div class="line">    console.log(target) // target 为事件源对象</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>事件源对象的好处：<br>1.不需要循环所有的子元素一个个绑定事件。<br>2.当有新的子元素被加入的时候不需要重新绑定事件。</p>
+<h5 id="事件处理模型-amp-事件处理机制"><a href="#事件处理模型-amp-事件处理机制" class="headerlink" title="事件处理模型 &amp; 事件处理机制"></a>事件处理模型 &amp; 事件处理机制</h5><p>事件处理模型：先捕获后冒泡（从外向里，从里向外）</p>
+<p>事件处理机制：<br>1.注册事件<br>2.初始化事件参数<br>3.触发事件（事件捕获，事件执行，事件冒泡）</p>
+<h5 id="鼠标事件"><a href="#鼠标事件" class="headerlink" title="鼠标事件"></a>鼠标事件</h5><p>鼠标事件：</p>
+<p>mousedown，mouseup，click // 点击事件先后顺序<br>mousemove // 在目标元素上移动<br>mouseover，mouseout // 移入 移出<br>contextmenu // 右键出现事件</p>
+<p>问题：pc端小方框拖拽?<br>答案：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">// html</div><div class="line">&lt;div id=<span class="string">"dragDiv"</span>&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">// css</div><div class="line"><span class="comment">#dragDiv &#123;</span></div><div class="line">    position: absolute;</div><div class="line">    height: 100px;</div><div class="line">    width: 100px;</div><div class="line">    background: red;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//js</div><div class="line">var div = document.getElementById(<span class="string">'dragDiv'</span>);</div><div class="line">var touchX,touchY;</div><div class="line"></div><div class="line">div.addEventListener(<span class="string">'mousedown'</span>,<span class="keyword">function</span> (e) &#123;</div><div class="line">    var x = e.clientX;</div><div class="line">    var y = e.clientY;</div><div class="line">    var left = this.offsetLeft;</div><div class="line">    var top = this.offsetTop;</div><div class="line"></div><div class="line">    touchX = x - left;</div><div class="line">    touchY = y - top;</div><div class="line"></div><div class="line">    document.addEventListener(<span class="string">'mousemove'</span>,move,<span class="literal">false</span>);</div><div class="line"></div><div class="line">    div.addEventListener(<span class="string">'mouseup'</span>,<span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">        document.removeEventListener(<span class="string">'mousemove'</span>,move,<span class="literal">false</span>);</div><div class="line">    &#125;,<span class="literal">false</span>)</div><div class="line"></div><div class="line"></div><div class="line">&#125;,<span class="literal">false</span>);</div><div class="line"></div><div class="line"><span class="keyword">function</span> move (e) &#123;</div><div class="line">    div.style.left = e.clientX - touchX + <span class="string">'px'</span>;</div><div class="line">    div.style.top = e.clientY - touchY + <span class="string">'px'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h5 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h5><p>键盘事件：</p>
+<p>keydown，keypress，keyup // 键盘事件的先后顺序</p>
+<p>问题：绑定回车事件？<br>答案：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">// html</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"text"</span> id=<span class="string">"input"</span>&gt;</div><div class="line"></div><div class="line">// js</div><div class="line">var input = document.getElementById(<span class="string">'input'</span>);</div><div class="line">input.onkeypress = <span class="keyword">function</span> (e) &#123;</div><div class="line">    <span class="keyword">if</span>(e.keyCode  == 13) &#123;</div><div class="line">        console.log(<span class="string">"回车"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h5 id="滚轮事件"><a href="#滚轮事件" class="headerlink" title="滚轮事件"></a>滚轮事件</h5><p>滚轮事件：</p>
+<p>scroll // 鼠标滚轮移动</p>
+<p>问题：绑定瀑布流（滚轮滑动到底）事件？<br>答案：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">window.onscroll = <span class="keyword">function</span> (e) &#123;            </div><div class="line">    var windowH = window.innerHeight;</div><div class="line">    var scrollH = document.body.scrollTop;</div><div class="line">    var documentH = document.body.scrollHeight;</div><div class="line">    <span class="keyword">if</span>(windowH + scrollH &gt;= documentH) &#123;</div><div class="line">        console.log(<span class="string">"滚动到底了"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h5 id="触摸事件（移动端）"><a href="#触摸事件（移动端）" class="headerlink" title="触摸事件（移动端）"></a>触摸事件（移动端）</h5><p>tap // 触摸事件<br>在移动端中 tap 事件没有延时，click 事件会有 200～300 毫秒延时，一般使用 tap。<br>但是 tap 会发生点击穿透，比如，为浮层绑定 tap 会触发浮层下边的点击事件。</p>
+<p>touchstart，touchmove，touchend // 触摸事件先后顺序 （点击屏幕，在屏幕上移动，离开屏幕）</p>
+<p>event.touches：表示当前跟踪的触摸操作的 touch 对象的数组。<br>event.targetTouches：特定于事件目标的 touch 对象的数组。<br>比如： 拖拽 等效果需要用到这两个属性。</p>
+<p>问题：移动端小方块拖拽？<br>答案：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">// html</div><div class="line">&lt;div id=<span class="string">"dragDiv"</span>&gt;&lt;/div&gt;</div><div class="line"></div><div class="line">// css</div><div class="line"><span class="comment">#dragDiv &#123;</span></div><div class="line">    position: absolute;</div><div class="line">    height: 100px;</div><div class="line">    width: 100px;</div><div class="line">    background: red;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//js</div><div class="line">var div = document.getElementById(<span class="string">'dragDiv'</span>);</div><div class="line">var touchX,touchY;</div><div class="line"></div><div class="line">div.addEventListener(<span class="string">'touchstart'</span>,<span class="keyword">function</span> (e) &#123;</div><div class="line">    var e = e.touches[0] || e.targetTouches[0];</div><div class="line">    var x = e.clientX;</div><div class="line">    var y = e.clientY;</div><div class="line">    var left = this.offsetLeft;</div><div class="line">    var top = this.offsetTop;</div><div class="line"></div><div class="line">    touchX = x - left;</div><div class="line">    touchY = y - top;</div><div class="line"></div><div class="line">    document.addEventListener(<span class="string">'touchmove'</span>,move,<span class="literal">false</span>);</div><div class="line"></div><div class="line">    div.addEventListener(<span class="string">'touchend'</span>,<span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">        document.removeEventListener(<span class="string">'touchmove'</span>,move,<span class="literal">false</span>);</div><div class="line">    &#125;,<span class="literal">false</span>)</div><div class="line"></div><div class="line"></div><div class="line">&#125;,<span class="literal">false</span>);</div><div class="line"></div><div class="line"><span class="keyword">function</span> move (e) &#123;</div><div class="line">    var e = e.touches[0] || e.targetTouches[0];</div><div class="line">    div.style.left = e.clientX - touchX + <span class="string">'px'</span>;</div><div class="line">    div.style.top = e.clientY - touchY + <span class="string">'px'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="重绘-amp-重排"><a href="#重绘-amp-重排" class="headerlink" title="重绘 &amp; 重排"></a>重绘 &amp; 重排</h4><p>重绘（repaint）：是元素自身的位置和宽高不变，只改变颜色的之类的属性而，不会导致后面的元素位置的变化，渲染树发生重绘。</p>
+<p>重排（reset）：是元素自身的位置或者宽高改变了从而导致的整个页面的大范围移动的时候，渲染树发生重排，尽量避免。</p>
+<h3 id="bom"><a href="#bom" class="headerlink" title="bom"></a>bom</h3><h4 id="window"><a href="#window" class="headerlink" title="window"></a>window</h4><p>window 对象表示浏览器中打开的窗口。<br>window 对象上有特别多的方法，一般来讲，能全局使用的都是 window 对象上的方法，例如我们常用的一些：</p>
+<p>console，setInterval，setTimeout，navigator，screen，history，location</p>
+<h4 id="navigator"><a href="#navigator" class="headerlink" title="navigator"></a>navigator</h4><p>navigator对象：</p>
+<p>1.navigator.userAgent  目前用户使用的是 pc端 还是 移动端，是什么 浏览器。</p>
+<p>问题：若是 移动端 跳转 移动端 url，若是 pc端 跳转 pc端 url？<br>答案：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(/iphone|nokia|sony|ericsson|mot|samsung|sgh|lg|philips|panasonic|alcatel|lenovo|cldc|midp|wap|android|iPod/i.test(navigator.userAgent.toLowerCase()))&#123;</div><div class="line">    window.location.href=<span class="string">"移动端url"</span>;</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    window.location.href=<span class="string">"pc端url"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="screen"><a href="#screen" class="headerlink" title="screen"></a>screen</h4><p>screen对象：</p>
+<p>1.screen.availHeight/screen.availWidth  可以查看除了 window 任务栏之外的 屏幕 的 高度 和 宽度。<br>2.screen.height/screen.width  返回 显示器 的 屏幕 的 高度 和 宽度,兼容的较少。<br>3.screen.deviceXDPI/screen.deviceYDPI  返回显示屏幕的分辨率。</p>
+<h4 id="history"><a href="#history" class="headerlink" title="history"></a>history</h4><p>history对象：</p>
+<p>1.history.length  浏览历史的长度。<br>2.history.back()  进入到下一个历史页面。<br>3.history.forward()  返回到上一个历史页面。<br>4.history.go()  当参数是 正数 的时候，前进到 下一个 历史页面，当是 负数 的时候，回退到 上一个 历史页面。</p>
+<h4 id="location"><a href="#location" class="headerlink" title="location"></a>location</h4><p>location对象：</p>
+<p>1.location.href  设置或返回当前的 url<br>2.location.host  返回当前的主机名 和 当前的 URL 端口号<br>3.location.search  设置或返回从 问号 开始的 URL（查询部分）<br>4.location.hash  跳转到 相应的 id 的 元素 的 位置<br>5.location.reload  重新加载 当前 页面</p>
+<h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><h4 id="创建一个正则表达式"><a href="#创建一个正则表达式" class="headerlink" title="创建一个正则表达式"></a>创建一个正则表达式</h4><p>创建正则表达式：</p>
+<p>1.字面量：var reg = /xxx/gim;<br>2.构造函数：var reg = new RegExp(‘xxx’,’gim’);</p>
+<h4 id="gim"><a href="#gim" class="headerlink" title="gim"></a>gim</h4><p>gim：</p>
+<p>g：全局匹配<br>i：忽略大小写<br>m：多行匹配</p>
+<h4 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h4><p>表达式：</p>
+<p>[]：匹配[]中的字符 // [a-zA-Z] 匹配 从 a 到 z，从 A 到 Z<br>^ ：不匹配这个字符(非的意思),在[^]使用 // [^a-zA-Z] 不匹配 从 a 到 z，从 A 到 Z<br>()：产生子表达式,提高优先级 // (\w)<br>| ：或，并列 关系和 [] 类似 // (\w|\W)</p>
+<h4 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h4><p>元字符：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">. ：除了\n(换行符)，\r(回车符之外的)</div><div class="line">\d：0~9</div><div class="line">\D：除了 0~9 之外的</div><div class="line">\w：a~zA~Z0~9_</div><div class="line">\W：除了 a~zA~Z0~9_ 之外的</div><div class="line">\s：\n，\r，\t(tab)，\v(垂直换行符)，\f(换页符)</div><div class="line">\S：除了\n，\r，\t(tab)，\v(垂直换行符)，\f(换页符)之外的</div><div class="line"></div><div class="line">[\d\D]，[\w\W]，[\s\S] 均可表示全集</div><div class="line"></div><div class="line">\b：单词边界</div><div class="line">\B：非单词边界</div></pre></td></tr></table></figure>
+<h4 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h4><p>量词：</p>
+<p>+：1~n 个该类型变量<br>*：0~n 个该类型变量<br>?：0~1 个该类型变量<br>{}: 几个 该类型的变量,{n} 或 {1,}={1,n}<br>^：以什么 开头<br>$：以什么 结尾<br>(?=)：正向 预查<br>(?!)：非正向 预查</p>
+<h4 id="方法-amp-例题"><a href="#方法-amp-例题" class="headerlink" title="方法 &amp; 例题"></a>方法 &amp; 例题</h4><p>正则表达式上的方法：</p>
+<p>1.reg.test(str) –&gt; true/false // 是否可以匹配出<br>2.reg.exec(str) –&gt; {“匹配出的表达式”,index: “检索到的 str 位置”,input: “str”}</p>
+<p>字符串上的方法：</p>
+<p>1.str.search(reg) –&gt; 检索匹配出的正则表达式位置，成功则结束<br>2.str.match(reg) –&gt; [“匹配出的表达式 1”,”匹配出的表达式 2”,…]<br>3.str.split(reg) –&gt; 根据正则表达式 划分<br>4.str.replace(reg,””) –&gt; 根据正则表达式 替换，第二个参数可以传值（将匹配出的表达式替换为该值），也可以传一个函数 function ($,$1,$2) {} // 函数中的参数分别为：匹配出来的字符串，第一个子表达式，第二个子表达式</p>
+<p>问题：将首字母大写？<br>答案：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var str = <span class="string">"my name is duanran"</span>;</div><div class="line">var reg = /\b(\w)/gim;       </div><div class="line">console.log(str.replace(reg,<span class="keyword">function</span> ($,<span class="variable">$1</span>) &#123;</div><div class="line">    <span class="built_in">return</span> <span class="variable">$1</span>.toUpperCase();</div><div class="line">&#125;));</div></pre></td></tr></table></figure></p>
+<p>问题：将金钱三位一打点？<br>答案：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var str = <span class="string">"111000000000"</span>;</div><div class="line">var reg = /(?=(\B\d&#123;3&#125;)+$)/gim;       </div><div class="line">console.log(str.replace(reg,<span class="string">'.'</span>));</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/review/" rel="tag"># review</a>
+          
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/24/css/" rel="next" title="css">
+                <i class="fa fa-chevron-left"></i> css
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/31/网络/" rel="prev" title="网络">
+                网络 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/./images/mySculpture.jpg"
+               alt="段然" />
+          <p class="site-author-name" itemprop="name">段然</p>
+           
+              <p class="site-description motion-element" itemprop="description">(254).toString(16).toUpperCase()</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/duanran1996112" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://duanran1996112.github.io/duanranHome.github.io/" target="_blank" title="MyHome">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  MyHome
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#js"><span class="nav-number">1.</span> <span class="nav-text">js</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#es5"><span class="nav-number">1.1.</span> <span class="nav-text">es5</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#js-数据类型"><span class="nav-number">1.1.1.</span> <span class="nav-text">js 数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#typeof-amp-类型转换"><span class="nav-number">1.1.2.</span> <span class="nav-text">typeof & 类型转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#预编译"><span class="nav-number">1.1.3.</span> <span class="nav-text">预编译</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象-Object-amp-new-操作符"><span class="nav-number">1.1.4.</span> <span class="nav-text">对象 Object & new 操作符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原型（prototype）-amp-原型链"><span class="nav-number">1.1.5.</span> <span class="nav-text">原型（prototype） & 原型链</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#this"><span class="nav-number">1.1.6.</span> <span class="nav-text">this</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#继承"><span class="nav-number">1.1.7.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#作用域-amp-闭包"><span class="nav-number">1.1.8.</span> <span class="nav-text">作用域 & 闭包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组-Array"><span class="nav-number">1.1.9.</span> <span class="nav-text">数组 Array</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#改变原数组"><span class="nav-number">1.1.9.1.</span> <span class="nav-text">改变原数组</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#不改变原数组"><span class="nav-number">1.1.9.2.</span> <span class="nav-text">不改变原数组</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#es5-数组上的新方法"><span class="nav-number">1.1.9.3.</span> <span class="nav-text">es5 数组上的新方法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组去重-amp-克隆（潜层-amp-深层）"><span class="nav-number">1.1.10.</span> <span class="nav-text">数组去重 & 克隆（潜层 & 深层）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#数组去重"><span class="nav-number">1.1.10.1.</span> <span class="nav-text">数组去重</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#克隆"><span class="nav-number">1.1.10.2.</span> <span class="nav-text">克隆</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类数组"><span class="nav-number">1.1.11.</span> <span class="nav-text">类数组</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dom"><span class="nav-number">1.2.</span> <span class="nav-text">dom</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#节点的类型"><span class="nav-number">1.2.1.</span> <span class="nav-text">节点的类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#选择元素节点"><span class="nav-number">1.2.2.</span> <span class="nav-text">选择元素节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遍历节点树-amp-遍历元素节点树"><span class="nav-number">1.2.3.</span> <span class="nav-text">遍历节点树 & 遍历元素节点树</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#增-／-插-／-替换-／-删除-操作"><span class="nav-number">1.2.4.</span> <span class="nav-text">增 ／ 插 ／ 替换 ／ 删除 操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#元素节点的-属性-amp-方法"><span class="nav-number">1.2.5.</span> <span class="nav-text">元素节点的 属性 & 方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#脚本化-css"><span class="nav-number">1.2.6.</span> <span class="nav-text">脚本化 css</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#获取-css-样式"><span class="nav-number">1.2.6.1.</span> <span class="nav-text">获取 css 样式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查看元素的-几何-尺寸"><span class="nav-number">1.2.6.2.</span> <span class="nav-text">查看元素的 几何 尺寸</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#赋值-css-属性"><span class="nav-number">1.2.6.3.</span> <span class="nav-text">赋值 css 属性</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#滚动条-滚动距离-amp-视口尺寸-大小"><span class="nav-number">1.2.7.</span> <span class="nav-text">滚动条 滚动距离 & 视口尺寸 大小</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#事件"><span class="nav-number">1.2.8.</span> <span class="nav-text">事件</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#绑定事件"><span class="nav-number">1.2.8.1.</span> <span class="nav-text">绑定事件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#解除事件"><span class="nav-number">1.2.8.2.</span> <span class="nav-text">解除事件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#取消事件冒泡"><span class="nav-number">1.2.8.3.</span> <span class="nav-text">取消事件冒泡</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#阻止默认事件"><span class="nav-number">1.2.8.4.</span> <span class="nav-text">阻止默认事件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#事件捕获-amp-事件冒泡"><span class="nav-number">1.2.8.5.</span> <span class="nav-text">事件捕获 & 事件冒泡</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#事件委托-amp-事件源对象"><span class="nav-number">1.2.8.6.</span> <span class="nav-text">事件委托 & 事件源对象</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#事件处理模型-amp-事件处理机制"><span class="nav-number">1.2.8.7.</span> <span class="nav-text">事件处理模型 & 事件处理机制</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#鼠标事件"><span class="nav-number">1.2.8.8.</span> <span class="nav-text">鼠标事件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#键盘事件"><span class="nav-number">1.2.8.9.</span> <span class="nav-text">键盘事件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#滚轮事件"><span class="nav-number">1.2.8.10.</span> <span class="nav-text">滚轮事件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#触摸事件（移动端）"><span class="nav-number">1.2.8.11.</span> <span class="nav-text">触摸事件（移动端）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重绘-amp-重排"><span class="nav-number">1.2.9.</span> <span class="nav-text">重绘 & 重排</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bom"><span class="nav-number">1.3.</span> <span class="nav-text">bom</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#window"><span class="nav-number">1.3.1.</span> <span class="nav-text">window</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#navigator"><span class="nav-number">1.3.2.</span> <span class="nav-text">navigator</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#screen"><span class="nav-number">1.3.3.</span> <span class="nav-text">screen</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#history"><span class="nav-number">1.3.4.</span> <span class="nav-text">history</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#location"><span class="nav-number">1.3.5.</span> <span class="nav-text">location</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#正则表达式"><span class="nav-number">1.4.</span> <span class="nav-text">正则表达式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建一个正则表达式"><span class="nav-number">1.4.1.</span> <span class="nav-text">创建一个正则表达式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gim"><span class="nav-number">1.4.2.</span> <span class="nav-text">gim</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表达式"><span class="nav-number">1.4.3.</span> <span class="nav-text">表达式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#元字符"><span class="nav-number">1.4.4.</span> <span class="nav-text">元字符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#量词"><span class="nav-number">1.4.5.</span> <span class="nav-text">量词</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#方法-amp-例题"><span class="nav-number">1.4.6.</span> <span class="nav-text">方法 & 例题</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">段然</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/three.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

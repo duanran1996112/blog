@@ -1,0 +1,843 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="review,网络," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="网络 + ajax + jsonp 基础内容">
+<meta name="keywords" content="review,网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网络">
+<meta property="og:url" content="http://yoursite.com/2017/07/31/网络/index.html">
+<meta property="og:site_name" content="Web 前端">
+<meta property="og:description" content="网络 + ajax + jsonp 基础内容">
+<meta property="og:updated_time" content="2017-08-01T10:21:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网络">
+<meta name="twitter:description" content="网络 + ajax + jsonp 基础内容">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/07/31/网络/"/>
+
+
+
+
+
+  <title>网络 | Web 前端</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Web 前端</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个专业的 Web 前端博客</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/31/网络/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="段然">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/./images/mySculpture.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Web 前端">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">网络</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-31T16:25:26+08:00">
+                2017-07-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/review/" itemprop="url" rel="index">
+                    <span itemprop="name">review</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/review/网络/" itemprop="url" rel="index">
+                    <span itemprop="name">网络</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  网络 + ajax + jsonp 基础内容
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><h3 id="网络基础"><a href="#网络基础" class="headerlink" title="网络基础"></a>网络基础</h3><h4 id="网络状态码"><a href="#网络状态码" class="headerlink" title="网络状态码"></a>网络状态码</h4><p>状态码:</p>
+<ul>
+<li><p><font color="#555">1xx：信息性状态码</font><br></p>
+</li>
+<li><p><font color="#555">2xx：成功状态码</font><br><font color="red">200：请求已经被服务器正常处理</font><br><font color="#555">201：服务器在请求的响应中建立了新文档</font><br><font color="#555">202：客户端请求正在被执行，但还没有处理完</font><br><font color="#555">203：文档被正常的返回</font><br><font color="red">204：请求处理成功，但是没有资源可以返回</font><br><font color="#555">205：重置内容</font><br><font color="red">206：表示客户端进行了范围请求，而服务器成功执行了这部分的GET请求</font><br></p>
+</li>
+<li><p><font color="#555">3xx：重定向状态码</font><br><font color="#555">300：请求的文档可以在多个地方找到</font><br><font color="red">301：永久性重定向</font><br><font color="red">302：临时性重定向</font><br><font color="red">303：请求的对应资源存在着另一个URI</font><br><font color="red">304：资源已找到，但是未符合要求</font><br><font color="#555">305：使用代理</font><br><font color="red">307：临时重定向</font><br></p>
+</li>
+<li><p><font color="#555">4xx：客户端错误状态码</font><br><font color="red">400：请求报文中存在语法错误</font><br><font color="red">401：发送的请求需要有通过HTTP认证的认证信息</font><br><font color="red">403：不允许访问该资源</font><br><font color="red">404：服务器上没有该资源</font><br><font color="#555">405：请求方法对某些特定的资源不允许使用</font><br><font color="#555">406：无法访问</font><br></p>
+</li>
+<li><p><font color="#555">5xx：服务器错误状态码</font><br><font color="red">500：服务器端在执行请求时发生错误</font><br><font color="#555">501：服务器不具备完成请求的功能</font><br><font color="#555">502：服务器作为网关或代理，从上游服务器收到无效响应</font><br><font color="red">503：服务器暂时处于超负载或正在停机维护，无法处理请求</font><br><font color="#555">504：服务器作为网关或代理，但是没有及时从上游服务器收到请求</font><br><font color="#555">505：服务器不支持请求中所用的 HTTP 协议版本</font><br></p>
+</li>
+</ul>
+<h4 id="同源策略"><a href="#同源策略" class="headerlink" title="同源策略"></a>同源策略</h4><p>同源策略: 协议名、域名、端口号 都相同。<br>不同源 的 客户端 脚本 在没有明确授权的情况下，是不能够读写对方的资源的。</p>
+<p>协议名：http ／ https　协议，https 协议 比 http 协议 多了一层 ssl 安全协议层</p>
+<p>域名：主域名 ／ 子域名 –&gt; www.baidu.com ／ zhidao.baidu.com<br>主域名 和 子域名 分为： 一级域名 ／ 二级域名 ／ 三级域名 ／ …<br>一级域名 com<br>二级域名 baidu.com</p>
+<p>端口号：80 ／ 8080（一般网页的默认端口号），当网页的端口号是默认端口号的时候，端口号会隐藏</p>
+<h4 id="三次握手-amp-四次挥手"><a href="#三次握手-amp-四次挥手" class="headerlink" title="三次握手 &amp; 四次挥手"></a>三次握手 &amp; 四次挥手</h4><p>三次握手：客户端与服务器建立连接<br>1.客户单发送 SYN 数据包给服务器<br>2.服务器回传一个 SYN / ACK 数据包<br>3.客户端回传一个 ACK 数据包</p>
+<p>四次挥手：客户端与服务器断开连接<br>1.客户端发送 FIN / ACK 数据包给服务器<br>2.服务器返回 ACK 报文<br>3.服务器与客户端断开连接, 发送 FIN / ACK 报文<br>4.客户端返回一个 ACK 报文, 挥手结束</p>
+<h4 id="URI-amp-URL"><a href="#URI-amp-URL" class="headerlink" title="URI &amp; URL"></a>URI &amp; URL</h4><p>URI：统一资源标识符<br>URL：统一资源定位符，URL 为 URI 的子集</p>
+<p>问题：在浏览器输入一个 url 都经历了什么？<br>答案：<br>1.浏览器通过 DNS 把域名解析成 ip 地址<br>2.客户端通过 TCP 协议 建立到服务器的 TCP 连接（三次握手）<br>3.客户端 向 服务端 发送 HTTP 协议包，请求 服务器 里面的 资源文档<br>4.服务器 向 客户端 发送 HTTP 协议 应答包<br>5.客户端 和 服务器 断开，客户端 开始 解释处理 HTML 文档</p>
+<h4 id="HTTP-协议-amp-TCP-IP-协议"><a href="#HTTP-协议-amp-TCP-IP-协议" class="headerlink" title="HTTP 协议 &amp; TCP / IP 协议"></a>HTTP 协议 &amp; TCP / IP 协议</h4><p>HTTP 协议 是 TCP / IP 协议 的子集。</p>
+<p>TCP / IP 分层管理的结构是: 应用层、传输层、网络层、数据链路层。</p>
+<p>应用层是 HTTP 协议<br>传输层是 TCP 协议<br>网络层是 IP 协议<br>链路层是 网络</p>
+<h4 id="请求-amp-响应"><a href="#请求-amp-响应" class="headerlink" title="请求 &amp; 响应"></a>请求 &amp; 响应</h4><p>HTTP 通过 报文 进行通信，报文 分为 请求报文 和 响应报文。</p>
+<p>请求报文：<br>1.请求头：请求方法，请求URL，HTTP协议，版本<br>2.请求行<br>3.请求主体</p>
+<p>响应报文：<br>1.响应头：报文协议，报文版本，状态码，状态描述<br>2.响应行<br>3.相应主体</p>
+<h4 id="get-／-post-／-put-／-delete"><a href="#get-／-post-／-put-／-delete" class="headerlink" title="get ／ post ／ put ／ delete"></a>get ／ post ／ put ／ delete</h4><p>get，post，put，delete：对应这个资源的 查，改，增，删 4 个操作。</p>
+<p>问题：get 与 post 的区别？<br>答案：</p>
+<p>get：<br>资源类型：主动的 或 被动的<br>数据类型：文本<br>数据量：小于255个字符<br>可见性：url 的一部分，在浏览器地址中可见<br>数据缓存：数据在 url 历史缓存中</p>
+<p>post：<br>资源类型：主动的<br>数据类型：文本 或 二进制<br>数据量：没有限制<br>可见性：作为 请求主体 发送，用户不可见<br>数据缓存：数据不在 url 历史缓存中</p>
+<h3 id="ajax-amp-fetch"><a href="#ajax-amp-fetch" class="headerlink" title="ajax &amp; fetch"></a>ajax &amp; fetch</h3><h4 id="ajax-对象"><a href="#ajax-对象" class="headerlink" title="ajax 对象"></a>ajax 对象</h4><p>AJAX 最重要的两个对象:<br>1.XMLHttpRequest() // 主流浏览器<br>2.ActiveXObject(‘Microsoft.XMLHTTP’) // ie</p>
+<p>通过这两个对象使 ajax 可以获取数据</p>
+<h4 id="ajax-优缺点"><a href="#ajax-优缺点" class="headerlink" title="ajax 优缺点"></a>ajax 优缺点</h4><p>AJAX 优点:<br>1.页面无刷新<br>2.使用异步的形式与服务器进行通信<br>3.减轻服务器的负担<br>4.不需要插件或者小程序</p>
+<p>AJAX缺点:<br>1.不支持浏览器的后退机制<br>2.对搜索引擎支持较弱<br>3.违背了 url 和 资源定位 的初衷</p>
+<h4 id="ajax-步骤"><a href="#ajax-步骤" class="headerlink" title="ajax 步骤"></a>ajax 步骤</h4><p>1.创建 ajax 对象<br>var xhr = XMLHttpRequest()<br>var xhr = ActiveXObject(‘Mircosoft.XMLHTTP’)</p>
+<p>2.创建与服务器的连接和调用<br>xhr.open(get/post, url, true/false) // 第三个参数是否异步</p>
+<p>3.监听对象状态改变<br>xhr.onReadyStateChange<br>xhr.readyState == 4<br>xhr.status == 200<br>callBack(responseText) // 若成功，通过回掉函数接收 ajax 返回的数据</p>
+<p>4.向服务器发送数据<br>xhr.send()</p>
+<p>问题：为什么 监听 要放到 发送数据前边<br>答案：若网速非常快，刚刚请求数据，数据就已经返回回来了，但是代码还没有走到监听部分，这就导致了监听部分的失效。</p>
+<h4 id="封装-ajax"><a href="#封装-ajax" class="headerlink" title="封装 ajax"></a>封装 ajax</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> AJAX(json) &#123;</div><div class="line">    var url = json.url,</div><div class="line">        method = json.method,</div><div class="line">        flag = json.flag,</div><div class="line">        data = json.data,</div><div class="line">        callBack = json.callBack,</div><div class="line">        xhr = null;</div><div class="line">    <span class="keyword">if</span>(window.XMLHttpRequest) &#123;</div><div class="line">        xhr = new window.XMLHttpRequest();</div><div class="line">    &#125;<span class="keyword">else</span> &#123;</div><div class="line">        xhr = new ActiveXObject(<span class="string">'Mircosoft.XMLHTTP'</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(method == <span class="string">'get'</span>) &#123;</div><div class="line">        url += <span class="string">'?'</span> + data + new Date().getTime();</div><div class="line">        xhr.open(<span class="string">'get'</span>, url, flag);</div><div class="line">    &#125;<span class="keyword">else</span> &#123;</div><div class="line">        xhr.open(<span class="string">'post'</span>, url, flag);</div><div class="line">    &#125;</div><div class="line">    xhr.onreadystatechange = <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">        <span class="keyword">if</span> (xhr.readyState === 4 &amp;&amp; xhr.status === 200) &#123; // 数据已经可用了</div><div class="line">            callBack(xhr.responseText);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(method == <span class="string">'get'</span>) &#123;</div><div class="line">        xhr.send();</div><div class="line">    &#125;<span class="keyword">else</span> &#123;</div><div class="line">        xhr.setRequestHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/x-www-form-urle'</span>); // 设置发送数据的格式</div><div class="line">        xhr.send(data);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h4><p>Fetch API：Fetch 是 XMLHttpRequest 的最新替代技术。<br>Fetch API 提供了一个 fetch() 方法，被定义在 BOM 的 window 对象中。<br>Fetch 方法返回的是一个 Promise 对象，让你能够对 请求 的 返回结果 进行检索。</p>
+<p>Fetch 的优点：<br>1.语法简洁，更加语义化<br>2.基于标准 Promise 实现，可以链式调用，支持 async/await</p>
+<p>Fetch 的使用：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">fetch(url).then(<span class="keyword">function</span> (res) &#123; // 需要同源策略</div><div class="line">    <span class="built_in">return</span> res.json();</div><div class="line">&#125;).then(<span class="keyword">function</span> (data) &#123;</div><div class="line">    console.log(data);</div><div class="line">&#125;).catch(<span class="keyword">function</span> (err) &#123;</div><div class="line">    console.log(err);</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h3 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h3><h4 id="跨域的方法"><a href="#跨域的方法" class="headerlink" title="跨域的方法"></a>跨域的方法</h4><p>1.flash<br>2.服务器代理中转 // 将资源放在服务器上<br>3.iframe + document.domain // 主域名相同，子域名不同，在子页面 与 主页面 分别加上 document.domain<br>4.iframe + location.hash // 用 location.hash 值传递数据，将数据放到 url 里<br>5.iframe + window.name // 修改子页面的 window.name 让主页面获取到这个值<br>6.postMessage //  使用 iframe.contentWindow.postMessage 发送数据，在子页面绑定 message 事件接收数据<br>7.jsonp // script 标签 src 属性 不受同源策略限制<br>8.cors // 跨域资源共享，需要 浏览器 与 服务器 同时支持</p>
+<p>后面两种现在比较常用！</p>
+<h4 id="jsonp-amp-jsonp-原理"><a href="#jsonp-amp-jsonp-原理" class="headerlink" title="jsonp &amp; jsonp 原理"></a>jsonp &amp; jsonp 原理</h4><p>什么是 jsonp：web 页面上 script 标签的 src 属性引入 js 文件不受跨域的影响，把资源直接放到 script 标签的 src 里面，相当于把 数据 以 json 的形式放到服务器上。无法监控 script 的 src 的加载状态，不知道数据有没有获取完成，所以我们要事先定义好处理函数，这个处理函数就是 jsonp。</p>
+<p>jsonp 的工作原理：script 标签的 src 向服务器发送了一个 GET 请求，同时 将约定好 的参数写到 url 上面。同源策略 只限制客户端，服务器端没有这个限制，因此服务器端 接收到 这个请求之后会 响应它。根据 url 上面的 参数 自动生成一串 json 数据 并且 格式化，然后返回到 发送请求 的页面上。script 标签获取到这个 字符串 之后 自动转化成 js 对象，然后执行这一段代码。</p>
+<h4 id="jsonp-优缺点"><a href="#jsonp-优缺点" class="headerlink" title="jsonp 优缺点"></a>jsonp 优缺点</h4><p>jsonp 优点：<br>1.JSONP 可以跨越同源策略<br>2.兼容性好<br>3.可以定义 callback 处理函数，处理函数交给了调用方</p>
+<p>jsonp 缺点：<br>1.只支持 GET 请求而 不支持 POST 请求<br>2.调用 失败 的时候 不会 返回 各种 HTTP 状态码<br>3.安全性不高</p>
+<h4 id="封装-jsonp"><a href="#封装-jsonp" class="headerlink" title="封装 jsonp"></a>封装 jsonp</h4><p>我们自己封装的简单 jsonp：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> jsonp (url,symbol,callback,jsonpCallBack) &#123; // symbol 一般为 &amp; 或者 ？</div><div class="line">    // 最后面的两个参数一般是和后台人员协商好的，回掉函数名称（一般为 cb 或 callback） 与 定义的回掉函数名字（我们定义的处理函数）</div><div class="line">    var script = document.createElement(<span class="string">'script'</span>);</div><div class="line">    script.src = url + symbol + callback + <span class="string">'='</span> + jsonpCallBack;</div><div class="line">    document.body.appendChild(script);</div><div class="line">    document.body.removeChild(script);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">function</span> <span class="keyword">do</span>Jsonp (data) &#123;</div><div class="line">    console.log(data);</div><div class="line">&#125;</div><div class="line"></div><div class="line">jsonp(<span class="string">'http://suggestion.baidu.com/su?wd=jsonp'</span>,<span class="string">'&amp;'</span>,<span class="string">'cb'</span>,<span class="string">'doJsonp'</span>);</div></pre></td></tr></table></figure>
+<h4 id="jsonp-百度搜索框"><a href="#jsonp-百度搜索框" class="headerlink" title="jsonp 百度搜索框"></a>jsonp 百度搜索框</h4><p>百度搜索框：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">// html</div><div class="line">&lt;input <span class="built_in">type</span>=<span class="string">"text"</span> id=<span class="string">"input"</span> placeholder=<span class="string">"请输入内容"</span>&gt;</div><div class="line">&lt;ul id=<span class="string">"ul"</span>&gt;&lt;/ul&gt;</div><div class="line"></div><div class="line">// js</div><div class="line">var input = document.getElementById(<span class="string">'input'</span>);</div><div class="line">var ul = document.getElementById(<span class="string">'ul'</span>);</div><div class="line">input.onkeyup = <span class="keyword">function</span> (e) &#123;</div><div class="line">    jsonp(<span class="string">'http://suggestion.baidu.com/su?wd='</span>,this.value,<span class="string">'&amp;'</span>,<span class="string">'cb'</span>,<span class="string">'doJsonp'</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">function</span> jsonp (url,value,symbol,callback,jsonpCallBack) &#123; </div><div class="line">    var script = document.createElement(<span class="string">'script'</span>);</div><div class="line">    script.src = url + value + symbol + callback + <span class="string">'='</span> + jsonpCallBack;</div><div class="line">    document.body.appendChild(script);</div><div class="line">    document.body.removeChild(script);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">function</span> <span class="keyword">do</span>Jsonp (data) &#123;</div><div class="line">    var data = data.s;</div><div class="line">    var html = <span class="string">''</span>;</div><div class="line">    <span class="keyword">for</span>(var i = 0 ; i &lt; data.length ; i++) &#123;</div><div class="line">        html += <span class="string">'&lt;li&gt;'</span>;</div><div class="line">        html += <span class="string">'&lt;a href="https://www.baidu.com/s?wd='</span> + data[i] + <span class="string">'" target="_blank"&gt;'</span>;</div><div class="line">        html += data[i];</div><div class="line">        html += <span class="string">'&lt;/a&gt;'</span>;</div><div class="line">        html += <span class="string">'&lt;/li&gt;'</span></div><div class="line">    &#125;</div><div class="line">    ul.innerHTML = html;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="cors-跨域资源共享"><a href="#cors-跨域资源共享" class="headerlink" title="cors 跨域资源共享"></a>cors 跨域资源共享</h4><p>cors 与 jsonp 相比的优点：<br>JSONP 只支持 GET 请求，CORS 支持所有类型的 HTTP 请求（get／post／put／delete）</p>
+<p>使用 cors：</p>
+<p>1.<br>在 请求头 中，添加 <font color="red">Origin</font> 字段。<br>Origin 字段 用来说明，请求来自哪个源（协议 + 域名 + 端口）。<br>服务器根据这个值，决定是否同意这次请求。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Origin: http://www.duanran96.com</div></pre></td></tr></table></figure>
+<p>2.<br>在 响应头 中，服务器会返回 <font color="red">Access-Control-Allow-Origin</font> 字段。<br>Access-Control-Allow-Origin 字段的值 要么是 Origin 的值，要么是 *（接受 任意 域名 的请求），表示 接受 这个 域名 的请求。<br>要是没有返回 Access-Control-Allow-Origin 字段，则代表出错了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Access-Control-Allow-Origin: http://www.duanran96.com </div><div class="line">或 </div><div class="line">Access-Control-Allow-Origin: *</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/review/" rel="tag"># review</a>
+          
+            <a href="/tags/网络/" rel="tag"># 网络</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/25/js/" rel="next" title="js">
+                <i class="fa fa-chevron-left"></i> js
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/01/jquery源码/" rel="prev" title="jquery源码">
+                jquery源码 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/./images/mySculpture.jpg"
+               alt="段然" />
+          <p class="site-author-name" itemprop="name">段然</p>
+           
+              <p class="site-description motion-element" itemprop="description">(254).toString(16).toUpperCase()</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/duanran1996112" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://duanran1996112.github.io/duanranHome.github.io/" target="_blank" title="MyHome">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  MyHome
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#网络"><span class="nav-number">1.</span> <span class="nav-text">网络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#网络基础"><span class="nav-number">1.1.</span> <span class="nav-text">网络基础</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#网络状态码"><span class="nav-number">1.1.1.</span> <span class="nav-text">网络状态码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#同源策略"><span class="nav-number">1.1.2.</span> <span class="nav-text">同源策略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三次握手-amp-四次挥手"><span class="nav-number">1.1.3.</span> <span class="nav-text">三次握手 & 四次挥手</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#URI-amp-URL"><span class="nav-number">1.1.4.</span> <span class="nav-text">URI & URL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP-协议-amp-TCP-IP-协议"><span class="nav-number">1.1.5.</span> <span class="nav-text">HTTP 协议 & TCP / IP 协议</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#请求-amp-响应"><span class="nav-number">1.1.6.</span> <span class="nav-text">请求 & 响应</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#get-／-post-／-put-／-delete"><span class="nav-number">1.1.7.</span> <span class="nav-text">get ／ post ／ put ／ delete</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ajax-amp-fetch"><span class="nav-number">1.2.</span> <span class="nav-text">ajax & fetch</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ajax-对象"><span class="nav-number">1.2.1.</span> <span class="nav-text">ajax 对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ajax-优缺点"><span class="nav-number">1.2.2.</span> <span class="nav-text">ajax 优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ajax-步骤"><span class="nav-number">1.2.3.</span> <span class="nav-text">ajax 步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#封装-ajax"><span class="nav-number">1.2.4.</span> <span class="nav-text">封装 ajax</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#fetch"><span class="nav-number">1.2.5.</span> <span class="nav-text">fetch</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#跨域"><span class="nav-number">1.3.</span> <span class="nav-text">跨域</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#跨域的方法"><span class="nav-number">1.3.1.</span> <span class="nav-text">跨域的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jsonp-amp-jsonp-原理"><span class="nav-number">1.3.2.</span> <span class="nav-text">jsonp & jsonp 原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jsonp-优缺点"><span class="nav-number">1.3.3.</span> <span class="nav-text">jsonp 优缺点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#封装-jsonp"><span class="nav-number">1.3.4.</span> <span class="nav-text">封装 jsonp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jsonp-百度搜索框"><span class="nav-number">1.3.5.</span> <span class="nav-text">jsonp 百度搜索框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cors-跨域资源共享"><span class="nav-number">1.3.6.</span> <span class="nav-text">cors 跨域资源共享</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">段然</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/three.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
